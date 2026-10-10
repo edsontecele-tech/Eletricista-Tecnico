@@ -155,7 +155,7 @@
 
                 <!-- Subtitle -->
                 <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                    Manutenção preventiva e corretiva, pequenos reparos, automação de casas inteligentes, instalações prediais, comerciais, rurais e reparos de bancada com máxima precisão.
+                    Manutenção preventiva, corretiva e preditiva em máquinas e QDC, automação industrial e de casas inteligentes, instalações prediais, comerciais, rurais e reparos de bancada com máxima precisão.
                 </p>
 
                 <!-- Action Buttons -->
@@ -189,8 +189,8 @@
                         <span class="text-xs font-medium text-slate-300">Reparo de Placas</span>
                     </div>
                     <div class="p-3 rounded-lg bg-slate-900/80 border border-slate-800 flex items-center gap-2.5">
-                        <i class="fa-solid fa-tractor text-amber-400 text-lg"></i>
-                        <span class="text-xs font-medium text-slate-300">Rural & Agrícola</span>
+                        <i class="fa-solid fa-industry text-amber-400 text-lg"></i>
+                        <span class="text-xs font-medium text-slate-300">Manutenção Industrial</span>
                     </div>
                 </div>
             </div>
@@ -235,9 +235,9 @@
                         <div class="flex items-center justify-between bg-slate-900/90 p-3 rounded-lg border border-slate-800">
                             <div class="flex items-center gap-3">
                                 <i class="fa-solid fa-gears text-amber-500"></i>
-                                <span class="text-xs font-semibold text-slate-300">Automação Industrial & Agrícola</span>
+                                <span class="text-xs font-semibold text-slate-300">Automação & Manutenção Industrial</span>
                             </div>
-                            <span class="text-[11px] text-emerald-400 font-mono"><i class="fa-solid fa-check"></i> CLP / Inversores</span>
+                            <span class="text-[11px] text-emerald-400 font-mono"><i class="fa-solid fa-check"></i> CLP / IHMs / Inversor</span>
                         </div>
                     </div>
 
@@ -267,7 +267,7 @@
                     Serviços Elétricos e Automação Sob Medida
                 </p>
                 <p class="text-slate-400 text-sm sm:text-base">
-                    Do pequeno reparo residencial e automação de casas inteligentes ao suporte técnico industrial e reparo de placas.
+                    Do pequeno reparo residencial e automação de casas inteligentes até a manutenção industrial, CLP, IHMs e reparo de placas.
                 </p>
             </div>
 
@@ -276,78 +276,41 @@
                 <button onclick="filterServices('todos')" id="tab-todos" class="tab-btn active bg-amberGlow text-slate-950 font-bold text-xs sm:text-sm py-2.5 px-4 rounded-lg transition-all">
                     Todos os Serviços
                 </button>
-                <button onclick="filterServices('smarthome')" id="tab-smarthome" class="tab-btn bg-industrial-800 text-slate-300 border border-slate-700 font-bold text-xs sm:text-sm py-2.5 px-4 rounded-lg hover:border-amberGlow transition-all">
-                    <i class="fa-solid fa-house-signal mr-1 text-amberGlow"></i> Casa Inteligente
-                </button>
                 <button onclick="filterServices('residencial')" id="tab-residencial" class="tab-btn bg-industrial-800 text-slate-300 border border-slate-700 font-bold text-xs sm:text-sm py-2.5 px-4 rounded-lg hover:border-amberGlow transition-all">
-                    <i class="fa-solid fa-house-plug mr-1 text-electricBlue"></i> Residencial & Predial
-                </button>
-                <button onclick="filterServices('comercial')" id="tab-comercial" class="tab-btn bg-industrial-800 text-slate-300 border border-slate-700 font-bold text-xs sm:text-sm py-2.5 px-4 rounded-lg hover:border-amberGlow transition-all">
-                    <i class="fa-solid fa-store mr-1 text-emerald-400"></i> Comercial
+                    <i class="fa-solid fa-house-plug mr-1 text-electricBlue"></i> Residencial, Predial & Comercial
                 </button>
                 <button onclick="filterServices('eletronica')" id="tab-eletronica" class="tab-btn bg-industrial-800 text-slate-300 border border-slate-700 font-bold text-xs sm:text-sm py-2.5 px-4 rounded-lg hover:border-amberGlow transition-all">
                     <i class="fa-solid fa-microchip mr-1 text-purple-400"></i> Placas Eletrônicas
                 </button>
                 <button onclick="filterServices('industrial')" id="tab-industrial" class="tab-btn bg-industrial-800 text-slate-300 border border-slate-700 font-bold text-xs sm:text-sm py-2.5 px-4 rounded-lg hover:border-amberGlow transition-all">
-                    <i class="fa-solid fa-industry mr-1 text-sky-400"></i> Industrial & Rural
+                    <i class="fa-solid fa-industry mr-1 text-sky-400"></i> Industrial & Máquinas
+                </button>
+                <button onclick="filterServices('smarthome')" id="tab-smarthome" class="tab-btn bg-industrial-800 text-slate-300 border border-slate-700 font-bold text-xs sm:text-sm py-2.5 px-4 rounded-lg hover:border-amberGlow transition-all">
+                    <i class="fa-solid fa-house-signal mr-1 text-amberGlow"></i> Casa Inteligente
                 </button>
             </div>
 
             <!-- Services Cards Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="servicesGrid">
                 
-                <!-- Card 1: Casa Inteligente (Smart Home) -->
-                <div class="service-card smarthome residencial bg-industrial-800 border border-slate-700 rounded-xl p-6 hover:border-amberGlow transition-all group glow-effect">
-                    <div class="w-12 h-12 rounded-lg bg-amberGlow/10 border border-amberGlow/30 text-amberGlow flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-house-signal"></i>
-                    </div>
-                    <span class="text-[10px] font-mono text-amberGlow uppercase tracking-wider block mb-1">Tecnologia & Conforto</span>
-                    <h3 class="font-heading font-bold text-lg text-white mb-2">Automação de Casa Inteligente</h3>
-                    <p class="text-slate-300 text-sm mb-4 leading-relaxed">
-                        Transforme sua casa com iluminação e controle inteligente por smartphone ou comando de voz (Alexa / Google Home).
-                    </p>
-                    <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-700/60 pt-4">
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Interruptores e tomadas inteligentes Wi-Fi/Zigbee</li>
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Fechaduras digitais e controle de acesso</li>
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Programação de cenários de iluminação e rotinas</li>
-                    </ul>
-                </div>
-
-                <!-- Card 2: Manutenção e Reparos Residencial & Predial -->
+                <!-- Card 1: Reparos & Instalações Residencial, Predial e Comercial -->
                 <div class="service-card residencial bg-industrial-800 border border-slate-700 rounded-xl p-6 hover:border-amberGlow transition-all group glow-effect">
                     <div class="w-12 h-12 rounded-lg bg-electricBlue/10 border border-electricBlue/30 text-electricBlue flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-house-plug"></i>
                     </div>
-                    <span class="text-[10px] font-mono text-electricBlue uppercase tracking-wider block mb-1">Residencial & Predial</span>
-                    <h3 class="font-heading font-bold text-lg text-white mb-2">Pequenos Reparos & Manutenção</h3>
+                    <span class="text-[10px] font-mono text-electricBlue uppercase tracking-wider block mb-1">Residencial, Predial & Comercial</span>
+                    <h3 class="font-heading font-bold text-lg text-white mb-2">Reparos e Instalações Elétricas</h3>
                     <p class="text-slate-300 text-sm mb-4 leading-relaxed">
-                        Instalações e consertos elétricos rápidos para casas, apartamentos, condomínios e edifícios com máxima segurança.
+                        Manutenção e instalações para casas, edifícios, condomínios, lojas e salas comerciais com máxima segurança.
                     </p>
                     <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-700/60 pt-4">
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Troca de fiação antiga, tomadas e interruptores</li>
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Solução para disjuntores caindo e curtos-circuitos</li>
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Instalação de chuveiros, lustres e pendentes</li>
+                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Troca de fiação, tomadas, interruptores e iluminação LED</li>
+                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Resolução de curto-circuito e disjuntores caindo</li>
+                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Adequação e balanceamento de carga elétrica</li>
                     </ul>
                 </div>
 
-                <!-- Card 3: Elétrica Comercial -->
-                <div class="service-card comercial bg-industrial-800 border border-slate-700 rounded-xl p-6 hover:border-amberGlow transition-all group glow-effect">
-                    <div class="w-12 h-12 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-store"></i>
-                    </div>
-                    <span class="text-[10px] font-mono text-emerald-400 uppercase tracking-wider block mb-1">Comércios & Escritórios</span>
-                    <h3 class="font-heading font-bold text-lg text-white mb-2">Instalações Elétricas Comerciais</h3>
-                    <p class="text-slate-300 text-sm mb-4 leading-relaxed">
-                        Adequação de rede elétrica e iluminação para lojas, salas comerciais, restaurantes e escritórios.
-                    </p>
-                    <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-700/60 pt-4">
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Iluminação comercial em LED e perfis de iluminação</li>
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Balanceamento de carga para equipamentos comerciais</li>
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Manutenção preventiva contra quedas de energia</li>
-                    </ul>
-                </div>
-
-                <!-- Card 4: Reparo de Placas Eletrônicas -->
+                <!-- Card 2: Reparo de Placas Eletrônicas -->
                 <div class="service-card eletronica bg-industrial-800 border border-slate-700 rounded-xl p-6 hover:border-amberGlow transition-all group glow-effect">
                     <div class="w-12 h-12 rounded-lg bg-purple-500/10 border border-purple-500/30 text-purple-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-microchip"></i>
@@ -355,46 +318,80 @@
                     <span class="text-[10px] font-mono text-purple-400 uppercase tracking-wider block mb-1">Laboratório de Bancada</span>
                     <h3 class="font-heading font-bold text-lg text-white mb-2">Reparo de Placas Eletrônicas</h3>
                     <p class="text-slate-300 text-sm mb-4 leading-relaxed">
-                        Diagnóstico minucioso e manutenção preventiva/corretiva em placas de comando, inversores e fontes.
+                        Diagnóstico minucioso e manutenção preventiva/corretiva em placas de comando, inversores e fontes chaveadas.
                     </p>
                     <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-700/60 pt-4">
                         <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Substituição de componentes SMD/PTH</li>
                         <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Testes em bancada com osciloscópio</li>
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Limpeza química e banho ultrassônico</li>
+                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Banho ultrassônico e limpeza química</li>
                     </ul>
                 </div>
 
-                <!-- Card 5: Quadros Elétricos e QDC -->
-                <div class="service-card residencial comercial industrial bg-industrial-800 border border-slate-700 rounded-xl p-6 hover:border-amberGlow transition-all group glow-effect">
-                    <div class="w-12 h-12 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-square-poll-vertical"></i>
-                    </div>
-                    <span class="text-[10px] font-mono text-sky-400 uppercase tracking-wider block mb-1">Quadros & Proteção</span>
-                    <h3 class="font-heading font-bold text-lg text-white mb-2">Montagem e Reforma de QDC</h3>
-                    <p class="text-slate-300 text-sm mb-4 leading-relaxed">
-                        Montagem, organização e adequação de Quadros de Distribuição com disjuntores, DPS e IDR de segurança.
-                    </p>
-                    <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-700/60 pt-4">
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Identificação e anilhamento de circuitos</li>
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Proteção contra queima de eletros e surtos</li>
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Reorganização de quadros antigos ou desordenados</li>
-                    </ul>
-                </div>
-
-                <!-- Card 6: Automação Industrial e Agrícola -->
+                <!-- Card 3: Automação Industrial, CLP, IHMs & Inversores -->
                 <div class="service-card industrial bg-industrial-800 border border-slate-700 rounded-xl p-6 hover:border-amberGlow transition-all group glow-effect">
                     <div class="w-12 h-12 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-gears"></i>
                     </div>
-                    <span class="text-[10px] font-mono text-amber-400 uppercase tracking-wider block mb-1">Industrial & Máquinas</span>
-                    <h3 class="font-heading font-bold text-lg text-white mb-2">Automação & Máquinas Agrícolas</h3>
+                    <span class="text-[10px] font-mono text-amber-400 uppercase tracking-wider block mb-1">Industrial & Automação</span>
+                    <h3 class="font-heading font-bold text-lg text-white mb-2">Automação, CLP, IHMs & Inversores</h3>
                     <p class="text-slate-300 text-sm mb-4 leading-relaxed">
-                        Manutenção em CLPs, inversores de frequência, servo drives e sistemas elétricos de máquinas agrícolas.
+                        Programação, parametrização e diagnóstico técnico em controladores lógicos (CLPs), telas IHMs e inversores de frequência.
                     </p>
                     <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-700/60 pt-4">
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Eliminação de falhas e paradas de máquina</li>
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Reparo de chicotes e sensores em campo</li>
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Parametrização e testes sob carga</li>
+                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Eliminação de travamentos e erros de comunicação</li>
+                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Configuração de telas IHMs e rampas de desaceleração</li>
+                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Diagnóstico de comunicação e acionamentos</li>
+                    </ul>
+                </div>
+
+                <!-- Card 4: Manutenção e Instalações Industriais -->
+                <div class="service-card industrial bg-industrial-800 border border-slate-700 rounded-xl p-6 hover:border-amberGlow transition-all group glow-effect">
+                    <div class="w-12 h-12 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-industry"></i>
+                    </div>
+                    <span class="text-[10px] font-mono text-sky-400 uppercase tracking-wider block mb-1">Infraestrutura Industrial</span>
+                    <h3 class="font-heading font-bold text-lg text-white mb-2">Manutenção e Instalações Industriais</h3>
+                    <p class="text-slate-300 text-sm mb-4 leading-relaxed">
+                        Execução e montagem de infraestrutura elétrica industrial, barramentos, leitos de cabos e máquinas.
+                    </p>
+                    <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-700/60 pt-4">
+                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Instalação e ligação de motores e painéis</li>
+                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Distribuição de circuitos elétricos trifásicos</li>
+                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Readequação de rede e aterramento industrial</li>
+                    </ul>
+                </div>
+
+                <!-- Card 5: Manutenção Preventiva, Corretiva ou Preditiva em Máquinas & QDC -->
+                <div class="service-card industrial bg-industrial-800 border border-slate-700 rounded-xl p-6 hover:border-amberGlow transition-all group glow-effect">
+                    <div class="w-12 h-12 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-square-poll-vertical"></i>
+                    </div>
+                    <span class="text-[10px] font-mono text-emerald-400 uppercase tracking-wider block mb-1">Manutenção Especializada</span>
+                    <h3 class="font-heading font-bold text-lg text-white mb-2">Preventiva, Corretiva & Preditiva (Máquinas & QDC)</h3>
+                    <p class="text-slate-300 text-sm mb-4 leading-relaxed">
+                        Inspeção e intervenção técnica em máquinas industriais, agrícolas e Quadros de Distribuição de Circuitos (QDC).
+                    </p>
+                    <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-700/60 pt-4">
+                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Reaperto de conexões, testes de isolamento e termografia</li>
+                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Proteção de quadros com disjuntores, DPS e IDR</li>
+                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Diagnóstico de falhas elétricas emergenciais</li>
+                    </ul>
+                </div>
+
+                <!-- Card 6: Casa Inteligente (Smart Home) -->
+                <div class="service-card smarthome residencial bg-industrial-800 border border-slate-700 rounded-xl p-6 hover:border-amberGlow transition-all group glow-effect">
+                    <div class="w-12 h-12 rounded-lg bg-amberGlow/10 border border-amberGlow/30 text-amberGlow flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-house-signal"></i>
+                    </div>
+                    <span class="text-[10px] font-mono text-amberGlow uppercase tracking-wider block mb-1">Tecnologia & Conforto</span>
+                    <h3 class="font-heading font-bold text-lg text-white mb-2">Automação de Casa Inteligente</h3>
+                    <p class="text-slate-300 text-sm mb-4 leading-relaxed">
+                        Transforme a sua residência com sistemas inteligentes controlados por telemóvel ou voz (Alexa / Google Home).
+                    </p>
+                    <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-700/60 pt-4">
+                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Interruptores e tomadas inteligentes Wi-Fi/Zigbee</li>
+                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Fechaduras digitais e controlo de acesso remoto</li>
+                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Configuração de cenários e rotinas personalizadas</li>
                     </ul>
                 </div>
 
@@ -419,11 +416,11 @@
 
                 <div class="bg-slate-900/90 border border-slate-800 p-6 rounded-xl border-l-4 border-l-electricBlue space-y-3">
                     <div class="text-electricBlue text-3xl mb-2">
-                        <i class="fa-solid fa-house-signal"></i>
+                        <i class="fa-solid fa-gears"></i>
                     </div>
-                    <h3 class="font-heading font-bold text-lg text-white">Especialista em Automação</h3>
+                    <h3 class="font-heading font-bold text-lg text-white">Especialista em Automação & IHMs</h3>
                     <p class="text-slate-300 text-sm leading-relaxed">
-                        Domínio em automação inteligente de ambientes e reparos eletrônicos de bancada com equipamentos de alta precisão.
+                        Domínio em automação industrial, CLPs, IHMs, inversores de frequência e reparos de placas de bancada.
                     </p>
                 </div>
 
@@ -433,7 +430,7 @@
                     </div>
                     <h3 class="font-heading font-bold text-lg text-white">Atendimento Ágil</h3>
                     <p class="text-slate-300 text-sm leading-relaxed">
-                        Pontualidade no atendimento programado e suporte emergencial para solucionar problemas elétricos sem complicação.
+                        Pontualidade no atendimento programado e suporte técnico para solucionar problemas elétricos com rapidez.
                     </p>
                 </div>
 
@@ -493,7 +490,7 @@
                     <div class="w-10 h-10 mx-auto rounded-full bg-amber-500/10 text-amber-500 flex items-center justify-center text-lg">
                         <i class="fa-solid fa-gears"></i>
                     </div>
-                    <h4 class="font-bold text-xs text-white">CLPs & Inversores</h4>
+                    <h4 class="font-bold text-xs text-white">CLPs, IHMs & Inversores</h4>
                     <p class="text-[11px] text-slate-400">Testes em Bancada</p>
                 </div>
 
@@ -535,14 +532,14 @@
                         <!-- Customer Name -->
                         <div class="space-y-2">
                             <label for="clientName" class="block text-xs font-bold text-slate-300 uppercase tracking-wider">Seu Nome / Empresa *</label>
-                            <input type="text" id="clientName" required placeholder="Ex: João Silva" 
+                            <input type="text" id="clientName" required placeholder="Ex: João Silva ou Brf" 
                                    class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amberGlow">
                         </div>
 
                         <!-- Location / City -->
                         <div class="space-y-2">
                             <label for="clientCity" class="block text-xs font-bold text-slate-300 uppercase tracking-wider">Sua Localização / Bairro *</label>
-                            <input type="text" id="clientCity" required placeholder="Ex: Centro" 
+                            <input type="text" id="clientCity" required placeholder="Ex: Ibirubá RS" 
                                    class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amberGlow">
                         </div>
 
@@ -554,14 +551,13 @@
                         <div class="space-y-2">
                             <label for="serviceType" class="block text-xs font-bold text-slate-300 uppercase tracking-wider">Tipo de Serviço *</label>
                             <select id="serviceType" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-amberGlow">
-                                <option value="Automação de Casa Inteligente (Smart Home)">Automação de Casa Inteligente (Smart Home)</option>
-                                <option value="Reparos & Manutenção Residencial">Reparos & Manutenção Residencial</option>
-                                <option value="Instalação Elétrica Predial / Condomínio">Instalação Elétrica Predial / Condomínio</option>
-                                <option value="Instalações Elétricas Comerciais">Instalações Elétricas Comerciais</option>
-                                <option value="Reparo de Placa Eletrônica">Reparo de Placa Eletrônica em Bancada</option>
-                                <option value="Automação Industrial / CLP / Inversores">Automação Industrial / CLP / Inversor</option>
+                                <option value="Reparos e Instalações Residencial, Predial e Comercial">Reparos e Instalações Residencial, Predial e Comercial</option>
+                                <option value="Reparo de Placa Eletrônica em Bancada">Reparo de Placa Eletrônica em Bancada</option>
+                                <option value="Automação Industrial / CLP / IHMs / Inversor">Automação Industrial / CLP / IHMs / Inversor</option>
+                                <option value="Manutenção e Instalações Industriais">Manutenção e Instalações Industriais</option>
+                                <option value="Manutenção Preventiva, Corretiva ou Preditiva em Máquinas & QDC">Manutenção Preventiva, Corretiva ou Preditiva em Máquinas & QDC</option>
                                 <option value="Máquinas Agrícolas / Elétrica Rural">Máquinas Agrícolas / Elétrica Rural</option>
-                                <option value="Quadro de Distribuição (QDC)">Quadro de Distribuição (QDC)</option>
+                                <option value="Automação de Casa Inteligente (Smart Home)">Automação de Casa Inteligente (Smart Home)</option>
                             </select>
                         </div>
 
@@ -580,7 +576,7 @@
                     <!-- Problem Description -->
                     <div class="space-y-2">
                         <label for="serviceDetails" class="block text-xs font-bold text-slate-300 uppercase tracking-wider">Descrição do Serviço ou Problema *</label>
-                        <textarea id="serviceDetails" rows="3" required placeholder="Descreva brevemente o que precisa (ex: instalar tomadas inteligentes Alexa, trocar fiação do chuveiro, consertar disjuntor caindo, arrumar placa...)" 
+                        <textarea id="serviceDetails" rows="3" required placeholder="Descreva brevemente o que precisa (ex: manutenção em CLP/IHM, revisão em quadro QDC, automação smart home...)" 
                                   class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amberGlow"></textarea>
                     </div>
 
