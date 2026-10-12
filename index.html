@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ELETRICISTA TÉCNICO | Credenciado CREA, Automação & Robótica</title>
+    <title>ELETRICISTA TÉCNICO | Credenciado CREA, Automação, Robótica & Energia Solar</title>
+    
+    <!-- Open Graph Meta Tags para Partilha no WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ELETRICISTA TÉCNICO | Automação, Robótica & Energia Solar">
+    <meta property="og:description" content="Soluções Inteligentes: Do Simples ao Complexo. Atendimento técnico residencial, predial, comercial, rural e industrial credenciado CREA.">
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -67,6 +72,8 @@
             <div class="flex items-center gap-4 flex-wrap justify-center sm:justify-start">
                 <span class="text-amberGlow font-bold"><i class="fa-solid fa-id-card mr-1"></i> Técnico Credenciado CREA</span>
                 <span class="hidden md:inline text-slate-700">|</span>
+                <span><i class="fa-solid fa-solar-panel text-amberGlow mr-1"></i> Energia Solar</span>
+                <span class="hidden md:inline text-slate-700">|</span>
                 <span><i class="fa-solid fa-bolt text-brightCyan mr-1"></i> Automação, Robótica & Placas</span>
                 <span class="hidden md:inline text-slate-700">|</span>
                 <span><i class="fa-solid fa-clock text-amberGlow mr-1"></i> Atendimento programado e emergência</span>
@@ -78,7 +85,7 @@
     </div>
 
     <!-- Main Navigation Header -->
-    <header class="sticky top-0 z-50 bg-industrial-950/95 backdrop-blur-md border-b border-slate-800 shadow-2xl">
+    <header class="sticky top-0 z-40 bg-industrial-950/95 backdrop-blur-md border-b border-slate-800 shadow-2xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-8 py-4 flex justify-between items-center">
             
             <!-- Logo -->
@@ -91,7 +98,7 @@
                         ELETRICISTA TÉCNICO
                     </span>
                     <span class="text-[10px] sm:text-xs text-slate-400 font-medium tracking-tight block mt-1">
-                        CREA-RS | AUTOMAÇÃO, ROBÓTICA & PLACAS
+                        CREA-RS | SOLUÇÕES ELÉTRICAS & ENERGIA SOLAR
                     </span>
                 </div>
             </a>
@@ -106,7 +113,7 @@
                 <a href="#contato" class="hover:text-brightCyan transition-colors">Contato</a>
             </nav>
 
-            <!-- WhatsApp CTA Button -->
+            <!-- WhatsApp CTA Button Header -->
             <div class="hidden sm:flex items-center gap-3">
                 <a href="https://wa.me/5554991377506?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20el%C3%A9trico." 
                    target="_blank" 
@@ -146,7 +153,7 @@
             <!-- Tag Badge com CREA -->
             <div class="inline-flex items-center gap-2 bg-industrial-800 border border-slate-700 text-amberGlow text-xs font-semibold px-4 py-1.5 rounded-full shadow-lg">
                 <i class="fa-solid fa-certificate text-amberGlow"></i>
-                <span>Técnico Credenciado CREA | Automação, Robótica & Manutenção</span>
+                <span>Técnico Credenciado CREA | Energia Solar, Automação & Robótica</span>
             </div>
 
             <!-- Main Title -->
@@ -156,7 +163,7 @@
 
             <!-- Subtitle -->
             <p class="text-slate-300 text-base sm:text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto">
-                Atendimento técnico completo, abrangendo do <strong class="text-white font-semibold">residencial, predial e comercial ao rural e industrial</strong>. Projetos elétricos, automação avançada, robótica e reparos laboratoriais em um só lugar.
+                Atendimento técnico completo, abrangendo do <strong class="text-white font-semibold">residencial, predial e comercial ao rural e industrial</strong>. Projetos elétricos, <strong class="text-amberGlow font-semibold">placas solares</strong>, automação avançada e reparos laboratoriais em um só lugar.
             </p>
 
             <!-- Action Buttons -->
@@ -188,7 +195,7 @@
                     Engenharia & Serviços Elétricos Multi-Setoriais
                 </p>
                 <p class="text-slate-400 text-sm sm:text-base">
-                    Atendimento de ponta a ponta: da manutenção residencial e agrícola até a programação industrial e reparo avançado em bancada.
+                    Atendimento de ponta a ponta: da manutenção residencial e energia solar até a programação industrial e reparo avançado em bancada.
                 </p>
             </div>
 
@@ -196,6 +203,9 @@
             <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10">
                 <button onclick="filterServices('todos')" id="tab-todos" class="tab-btn active bg-electricBlue text-white font-bold text-xs sm:text-sm py-2.5 px-4 rounded-lg transition-all shadow-md">
                     Todos os Serviços
+                </button>
+                <button onclick="filterServices('solar')" id="tab-solar" class="tab-btn bg-industrial-800 text-slate-300 border border-slate-700 font-bold text-xs sm:text-sm py-2.5 px-4 rounded-lg hover:border-brightCyan transition-all">
+                    <i class="fa-solid fa-solar-panel mr-1 text-amberGlow"></i> Energia Solar
                 </button>
                 <button onclick="filterServices('residencial')" id="tab-residencial" class="tab-btn bg-industrial-800 text-slate-300 border border-slate-700 font-bold text-xs sm:text-sm py-2.5 px-4 rounded-lg hover:border-brightCyan transition-all">
                     <i class="fa-solid fa-house-plug mr-1 text-brightCyan"></i> Residencial, Predial & Comercial
@@ -217,7 +227,24 @@
             <!-- Services Cards Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="servicesGrid">
                 
-                <!-- Card 1: Reparos & Instalações Residencial, Predial e Comercial -->
+                <!-- Card 1: Energia Solar e Placas Fotovoltaicas -->
+                <div class="service-card solar residencial rural industrial bg-industrial-800 border border-slate-700/80 rounded-xl p-6 hover:border-brightCyan transition-all group glow-effect">
+                    <div class="w-12 h-12 rounded-lg bg-amberGlow/10 border border-amberGlow/30 text-amberGlow flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-solar-panel"></i>
+                    </div>
+                    <span class="text-[10px] font-mono text-amberGlow uppercase tracking-wider block mb-1">Economia & Sustentabilidade</span>
+                    <h3 class="font-heading font-bold text-lg text-white mb-2">Energia Solar & Placas Fotovoltaicas</h3>
+                    <p class="text-slate-300 text-sm mb-4 leading-relaxed">
+                        Dimensionamento, instalação e manutenção de sistemas solares fotovoltaicos On-Grid e Off-Grid para residências, comércios e agronegócio.
+                    </p>
+                    <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-700/60 pt-4">
+                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Instalação de módulos solares, inversores e microinversores</li>
+                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Manutenção preventiva, limpeza técnica e inspeção térmica</li>
+                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Instalação e readequação de Stringbox e proteções CC/CA</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: Reparos & Instalações Residencial, Predial e Comercial -->
                 <div class="service-card residencial bg-industrial-800 border border-slate-700/80 rounded-xl p-6 hover:border-brightCyan transition-all group glow-effect">
                     <div class="w-12 h-12 rounded-lg bg-electricBlue/10 border border-electricBlue/30 text-brightCyan flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-city"></i>
@@ -231,11 +258,10 @@
                         <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Instalação e substituição de chuveiros e iluminação LED</li>
                         <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Troca e dimensionamento de disjuntores, IDR e DPS</li>
                         <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Troca de fiação, tomadas e quadros elétricos</li>
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Solução para curtos-circuitos e sobredimensionamento</li>
                     </ul>
                 </div>
 
-                <!-- Card 2: Elétrica Rural e Agrícola -->
+                <!-- Card 3: Elétrica Rural e Agrícola -->
                 <div class="service-card rural bg-industrial-800 border border-slate-700/80 rounded-xl p-6 hover:border-brightCyan transition-all group glow-effect">
                     <div class="w-12 h-12 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-tractor"></i>
@@ -252,7 +278,7 @@
                     </ul>
                 </div>
 
-                <!-- Card 3: Manutenção e Instalação Industrial -->
+                <!-- Card 4: Manutenção e Instalação Industrial -->
                 <div class="service-card industrial bg-industrial-800 border border-slate-700/80 rounded-xl p-6 hover:border-brightCyan transition-all group glow-effect">
                     <div class="w-12 h-12 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-industry"></i>
@@ -269,7 +295,7 @@
                     </ul>
                 </div>
 
-                <!-- Card 4: Automação, Programação e Robótica Industrial -->
+                <!-- Card 5: Automação, Programação e Robótica Industrial -->
                 <div class="service-card robotica industrial bg-industrial-800 border border-slate-700/80 rounded-xl p-6 hover:border-brightCyan transition-all group glow-effect">
                     <div class="w-12 h-12 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-robot"></i>
@@ -286,37 +312,20 @@
                     </ul>
                 </div>
 
-                <!-- Card 5: Reparo de Placas Eletrônicas -->
-                <div class="service-card eletronica bg-industrial-800 border border-slate-700/80 rounded-xl p-6 hover:border-brightCyan transition-all group glow-effect">
+                <!-- Card 6: Reparo de Placas Eletrônicas e Inversores Solares -->
+                <div class="service-card eletronica solar bg-industrial-800 border border-slate-700/80 rounded-xl p-6 hover:border-brightCyan transition-all group glow-effect">
                     <div class="w-12 h-12 rounded-lg bg-purple-500/10 border border-purple-500/30 text-purple-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-microchip"></i>
                     </div>
                     <span class="text-[10px] font-mono text-purple-400 uppercase tracking-wider block mb-1">Laboratório de Bancada</span>
-                    <h3 class="font-heading font-bold text-lg text-white mb-2">Reparo Laboratorial de Placas</h3>
+                    <h3 class="font-heading font-bold text-lg text-white mb-2">Reparo Laboratorial de Placas & Inversores</h3>
                     <p class="text-slate-300 text-sm mb-4 leading-relaxed">
-                        Diagnóstico minucioso em nível de componentes para placas de inversores, equipamentos de ar-condicionado e máquinas.
+                        Diagnóstico minucioso em nível de componentes para inversores de frequência, inversores solares e controladores.
                     </p>
                     <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-700/60 pt-4">
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Placas de Inversores, Soft-Starters e Ar Inverter</li>
+                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Reparação de Inversores Solares e Soft-Starters</li>
                         <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Substituição de componentes SMD/PTH e soldas de precisão</li>
                         <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Análise de sinal com osciloscópio e fontes de bancada</li>
-                    </ul>
-                </div>
-
-                <!-- Card 6: Casa Inteligente (Smart Home) -->
-                <div class="service-card residencial bg-industrial-800 border border-slate-700/80 rounded-xl p-6 hover:border-brightCyan transition-all group glow-effect">
-                    <div class="w-12 h-12 rounded-lg bg-amberGlow/10 border border-amberGlow/30 text-amberGlow flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-house-signal"></i>
-                    </div>
-                    <span class="text-[10px] font-mono text-amberGlow uppercase tracking-wider block mb-1">Tecnologia & Conforto</span>
-                    <h3 class="font-heading font-bold text-lg text-white mb-2">Automação de Casa Inteligente</h3>
-                    <p class="text-slate-300 text-sm mb-4 leading-relaxed">
-                        Projetos para automação residencial com controle de dispositivos inteligentes via celular ou comando de voz.
-                    </p>
-                    <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-700/60 pt-4">
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Módulos e interruptores Wi-Fi / Zigbee</li>
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Fechaduras digitais e controle remoto de iluminação</li>
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Integração com sistemas Alexa e Google Home</li>
                     </ul>
                 </div>
 
@@ -341,11 +350,11 @@
 
                 <div class="bg-slate-900/90 border border-slate-800 p-6 rounded-xl border-l-4 border-l-electricBlue space-y-3">
                     <div class="text-brightCyan text-3xl mb-2">
-                        <i class="fa-solid fa-microchip"></i>
+                        <i class="fa-solid fa-solar-panel"></i>
                     </div>
-                    <h3 class="font-heading font-bold text-lg text-white">Especialista Multi-Setorial</h3>
+                    <h3 class="font-heading font-bold text-lg text-white">Energia Solar & Alta Tecnologia</h3>
                     <p class="text-slate-300 text-sm leading-relaxed">
-                        Expertise completa para resolver demandas do residencial ao industrial, incluindo robótica, CLPs e reparo de placas.
+                        Expertise completa em instalação de painéis solares, manutenção de inversores, automação, robótica e eletrônica.
                     </p>
                 </div>
 
@@ -363,6 +372,35 @@
         </div>
     </section>
 
+    <!-- Secção Selos de Conformidade e Normas de Segurança -->
+    <div class="bg-industrial-950 py-10 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-center text-slate-300 text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                
+                <div class="flex items-center gap-2.5 bg-industrial-800/80 border border-slate-700/60 px-4 py-3 rounded-xl shadow-md">
+                    <i class="fa-solid fa-shield-halved text-amberGlow text-xl"></i>
+                    <span>Norma NR-10 (Segurança Elétrica)</span>
+                </div>
+
+                <div class="flex items-center gap-2.5 bg-industrial-800/80 border border-slate-700/60 px-4 py-3 rounded-xl shadow-md">
+                    <i class="fa-solid fa-person-digging text-brightCyan text-xl"></i>
+                    <span>Norma NR-35 (Trabalho em Altura)</span>
+                </div>
+
+                <div class="flex items-center gap-2.5 bg-industrial-800/80 border border-slate-700/60 px-4 py-3 rounded-xl shadow-md">
+                    <i class="fa-solid fa-file-contract text-emerald-400 text-xl"></i>
+                    <span>Emissão de ART / CREA-RS</span>
+                </div>
+
+                <div class="flex items-center gap-2.5 bg-industrial-800/80 border border-slate-700/60 px-4 py-3 rounded-xl shadow-md">
+                    <i class="fa-solid fa-solar-panel text-amber-400 text-xl"></i>
+                    <span>Homologação Fotovoltaica</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <!-- Interactive Workbench Visual Showcase -->
     <section id="bancada" class="py-16 lg:py-24 bg-industrial-950 border-b border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-8">
@@ -372,7 +410,7 @@
                     Equipamentos e Diagnóstico Técnico
                 </h2>
                 <p class="text-slate-400 text-sm">
-                    Ambiente de bancada equipado para testes precisos, simulações de carga e diagnósticos em componentes.
+                    Ambiente de bancada equipado para testes precisos em inversores solares, placas e componentes industriais.
                 </p>
             </div>
 
@@ -381,10 +419,10 @@
                 
                 <div class="bg-industrial-800 border border-slate-700/80 p-4 rounded-xl text-center space-y-2 hover:border-brightCyan transition-colors">
                     <div class="w-10 h-10 mx-auto rounded-full bg-amberGlow/10 text-amberGlow flex items-center justify-center text-lg">
-                        <i class="fa-solid fa-house-signal"></i>
+                        <i class="fa-solid fa-solar-panel"></i>
                     </div>
-                    <h4 class="font-bold text-xs text-white">Módulos Smart</h4>
-                    <p class="text-[11px] text-slate-400">Wi-Fi & Automação</p>
+                    <h4 class="font-bold text-xs text-white">Inversores Solares</h4>
+                    <p class="text-[11px] text-slate-400">Testes On/Off-Grid</p>
                 </div>
 
                 <div class="bg-industrial-800 border border-slate-700/80 p-4 rounded-xl text-center space-y-2 hover:border-brightCyan transition-colors">
@@ -399,7 +437,7 @@
                     <div class="w-10 h-10 mx-auto rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg">
                         <i class="fa-solid fa-square-poll-vertical"></i>
                     </div>
-                    <h4 class="font-bold text-xs text-white">Painel QDC</h4>
+                    <h4 class="font-bold text-xs text-white">Painel QDC & Stringbox</h4>
                     <p class="text-[11px] text-slate-400">Disjuntores & DPS</p>
                 </div>
 
@@ -476,11 +514,12 @@
                         <div class="space-y-2">
                             <label for="serviceType" class="block text-xs font-bold text-slate-300 uppercase tracking-wider">Setor / Tipo de Serviço *</label>
                             <select id="serviceType" class="w-full bg-industrial-950 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-brightCyan">
+                                <option value="Energia Solar / Placas Fotovoltaicas">Energia Solar / Placas Fotovoltaicas (On-Grid / Off-Grid)</option>
                                 <option value="Residencial, Predial e Comercial">Residencial, Predial e Comercial (Chuveiros, Fiação, QDC)</option>
                                 <option value="Elétrica Rural e Agrícola">Elétrica Rural & Agrícola (Bombas, Irrigação, Máquinas)</option>
                                 <option value="Manutenção e Instalação Industrial">Manutenção e Instalação Industrial</option>
                                 <option value="Automação, Programação e Robótica Industrial">Automação, Programação e Robótica Industrial</option>
-                                <option value="Reparo Laboratorial de Placas Eletrônicas">Reparo Laboratorial de Placas Eletrônicas</option>
+                                <option value="Reparo Laboratorial de Placas & Inversores Solares">Reparo Laboratorial de Placas & Inversores Solares</option>
                                 <option value="Automação de Casa Inteligente (Smart Home)">Automação de Casa Inteligente (Smart Home)</option>
                             </select>
                         </div>
@@ -500,7 +539,7 @@
                     <!-- Problem Description -->
                     <div class="space-y-2">
                         <label for="serviceDetails" class="block text-xs font-bold text-slate-300 uppercase tracking-wider">Descrição do Serviço ou Problema *</label>
-                        <textarea id="serviceDetails" rows="3" required placeholder="Descreva o que precisa (ex: manutenção em quadro elétrico, reparo de placa inverter, automação agrícola ou industrial...)" 
+                        <textarea id="serviceDetails" rows="3" required placeholder="Descreva o que precisa (ex: projeto ou limpeza de sistema solar fotovoltaico, reparo de inversor, manutenção em quadro elétrico...)" 
                                   class="w-full bg-industrial-950 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-brightCyan"></textarea>
                     </div>
 
@@ -539,7 +578,7 @@
                         Fale com o Eletricista Técnico
                     </h2>
                     <p class="text-slate-300 text-sm mt-2">
-                        Entre em contato diretamente para tirar dúvidas ou solicitar um atendimento técnico personalizado.
+                        Entre em contato diretamente para tirar dúvidas sobre energia solar, automação ou solicitar um orçamento.
                     </p>
                 </div>
 
@@ -582,7 +621,7 @@
                 </div>
                 <div>
                     <span class="font-heading font-bold text-slate-200 block text-sm">ELETRICISTA TÉCNICO</span>
-                    <span class="text-[11px] text-slate-400">Técnico Credenciado CREA | Soluções Inteligentes do Simples ao Complexo</span>
+                    <span class="text-[11px] text-slate-400">Técnico Credenciado CREA | Soluções Inteligentes: Do Simples ao Complexo</span>
                 </div>
             </div>
 
@@ -592,6 +631,19 @@
 
         </div>
     </footer>
+
+    <!-- Botão Flutuante do WhatsApp (Fixo no canto inferior direito) -->
+    <a href="https://wa.me/5554991377506?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Contactar pelo WhatsApp"
+       class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-400 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-slate-900 group">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+        <!-- Tooltip ao passar o cursor -->
+        <span class="absolute right-16 bg-slate-900 text-white text-xs px-3 py-1.5 rounded-lg border border-slate-700 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg pointer-events-none">
+            Fale no WhatsApp
+        </span>
+    </a>
 
     <!-- Inline JavaScript -->
     <script>
