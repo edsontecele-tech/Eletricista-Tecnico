@@ -3,34 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eletricista Técnico Edson | Residencial, Industrial & Solar</title>
-
-    <!-- Meta Tags Primárias & SEO -->
-    <meta name="title" content="Eletricista Técnico Edson | Residencial, Industrial & Solar">
-    <meta name="description" content="Serviços elétricos residenciais, prediais e industriais, energia solar, automação e robótica em Marau, Casca e região. Credenciado CREA-RS.">
-    <meta name="author" content="Eletricista Técnico Edson">
-    <meta name="robots" content="index, follow">
-
-    <!-- Favicon (Ícone de Raio Elétrico) -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230284c7'><path d='M13 2L3 14h7v8l10-12h-7z'/></svg>">
-
-    <!-- Open Graph / WhatsApp & Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://seusite.com.br/">
-    <meta property="og:title" content="Eletricista Técnico Edson | Residencial, Industrial & Solar">
-    <meta property="og:description" content="Do disjuntor da sua casa à automação e robótica da sua indústria. Instalação, manutenção e energia solar em Marau e região.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&h=630&q=80">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:locale" content="pt_BR">
-    <meta property="og:site_name" content="Eletricista Técnico Edson">
-
-    <!-- Twitter / Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Eletricista Técnico Edson | Residencial, Industrial & Solar">
-    <meta name="twitter:description" content="Do disjuntor da sua casa à automação e robótica da sua indústria. Instalação, manutenção e energia solar em Marau e região.">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&h=630&q=80">
+    <title>ELETRICISTA TÉCNICO | Credenciado CREA, Automação, Robótica & Solar</title>
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -48,9 +21,13 @@
             theme: {
                 extend: {
                     colors: {
-                        amberGlow: '#F59E0B',
-                        electricBlue: '#0284c7',
-                        solarYellow: '#eab308'
+                        brand: {
+                            blue: '#0284c7', // Azul Profissional
+                            cyan: '#06b6d4', // Ciano Futurista
+                            dark: '#0f172a', // Slate 900
+                            light: '#f8fafc', // Slate 50
+                        },
+                        amberGlow: '#f59e0b',
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -62,70 +39,72 @@
     </script>
     
     <style>
-        .circuit-bg {
+        /* Fundo futurista claro (padrão de pontos técnicos) */
+        .circuit-bg-light {
             background-color: #f8fafc;
             background-image: radial-gradient(#cbd5e1 1px, transparent 1px), radial-gradient(#cbd5e1 1px, #f8fafc 1px);
             background-size: 40px 40px;
             background-position: 0 0, 20px 20px;
         }
-        .tech-border {
-            border-left: 4px solid #F59E0B;
+        
+        /* Efeito de vidro para o menu */
+        .glass-header {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
         }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
-        }
+
+        /* Sombra futurista suave ao passar o mouse */
         .glow-effect:hover {
-            box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.15);
-            transform: translateY(-2px);
+            box-shadow: 0 15px 35px -5px rgba(2, 132, 199, 0.15);
+            transform: translateY(-3px);
         }
     </style>
 </head>
-<body class="bg-slate-100 text-slate-800 font-sans antialiased selection:bg-amberGlow selection:text-white">
+<body class="bg-brand-light text-slate-700 font-sans antialiased selection:bg-brand-blue selection:text-white">
 
     <!-- Top Contact Bar -->
-    <div class="bg-slate-900 border-b border-slate-800 text-xs py-2 px-4 sm:px-8 text-slate-300">
+    <div class="bg-brand-dark border-b border-slate-800 text-xs py-2 px-4 sm:px-8 text-slate-300">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
             <div class="flex items-center gap-4 flex-wrap justify-center sm:justify-start">
                 <span class="text-amberGlow font-bold"><i class="fa-solid fa-id-card mr-1"></i> Técnico Credenciado CREA</span>
-                <span class="hidden md:inline">|</span>
-                <span><i class="fa-solid fa-solar-panel text-amberGlow mr-1"></i> Solar, Residencial & Industrial</span>
-                <span class="hidden md:inline">|</span>
-                <span><i class="fa-solid fa-clock text-electricBlue mr-1"></i> Atendimento programado e emergência</span>
+                <span class="hidden md:inline text-slate-600">|</span>
+                <span><i class="fa-solid fa-microchip text-brand-cyan mr-1"></i> Automação & Robótica</span>
+                <span class="hidden md:inline text-slate-600">|</span>
+                <span><i class="fa-solid fa-solar-panel text-amberGlow mr-1"></i> Energia Solar</span>
             </div>
             <div class="flex items-center gap-3">
-                <a href="#orcamento" class="hover:text-amberGlow transition-colors"><i class="fa-solid fa-calculator mr-1"></i> Simular Orçamento</a>
+                <a href="#orcamento" class="hover:text-white transition-colors"><i class="fa-solid fa-calculator mr-1"></i> Simular Orçamento</a>
             </div>
         </div>
     </div>
 
     <!-- Main Navigation Header -->
-    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <header class="sticky top-0 z-50 glass-header border-b border-slate-200 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-8 py-4 flex justify-between items-center">
             
             <!-- Logo -->
             <a href="#" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-lg bg-slate-100 border border-slate-300 flex items-center justify-center text-electricBlue text-xl font-bold group-hover:border-electricBlue transition-colors">
+                <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 shadow-sm flex items-center justify-center text-brand-blue text-xl font-bold group-hover:border-brand-blue group-hover:text-brand-cyan transition-colors">
                     <i class="fa-solid fa-bolt"></i>
                 </div>
                 <div>
-                    <span class="font-heading font-extrabold text-lg sm:text-xl tracking-wider text-slate-900 block leading-none">
+                    <span class="font-heading font-extrabold text-lg sm:text-xl tracking-tight text-slate-900 block leading-none">
                         ELETRICISTA TÉCNICO
                     </span>
-                    <span class="text-[10px] sm:text-xs text-slate-500 font-bold tracking-tight block mt-1">
-                        RESIDENCIAL, INDUSTRIAL & SOLAR
+                    <span class="text-[10px] sm:text-xs text-brand-blue font-semibold tracking-wide block mt-1 uppercase">
+                        CREA-RS | Automação, Robótica & Solar
                     </span>
                 </div>
             </a>
 
             <!-- Desktop Menu -->
             <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-600">
-                <a href="#inicio" class="hover:text-electricBlue transition-colors">Início</a>
-                <a href="#servicos" class="hover:text-electricBlue transition-colors">Serviços</a>
-                <a href="#diferenciais" class="hover:text-electricBlue transition-colors">Diferenciais</a>
-                <a href="#orcamento" class="hover:text-electricBlue transition-colors">Calculadora</a>
-                <a href="#contato" class="hover:text-electricBlue transition-colors">Contato</a>
+                <a href="#inicio" class="hover:text-brand-blue transition-colors">Início</a>
+                <a href="#servicos" class="hover:text-brand-blue transition-colors">Serviços</a>
+                <a href="#diferenciais" class="hover:text-brand-blue transition-colors">Estrutura</a>
+                <a href="#orcamento" class="hover:text-brand-blue transition-colors">Calculadora</a>
+                <a href="#contato" class="hover:text-brand-blue transition-colors">Contato</a>
             </nav>
 
             <!-- WhatsApp CTA Button -->
@@ -133,81 +112,161 @@
                 <a href="https://wa.me/5554991377506?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20el%C3%A9trico." 
                    target="_blank" 
                    rel="noopener noreferrer"
-                   class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-semibold py-2.5 px-5 rounded-lg flex items-center gap-2 shadow-md shadow-emerald-600/30 transition-all hover:scale-105">
+                   class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-bold py-2.5 px-5 rounded-lg flex items-center gap-2 shadow-md shadow-emerald-600/20 transition-all hover:scale-105">
                     <i class="fa-brands fa-whatsapp text-lg"></i>
                     <span>Chamar no WhatsApp</span>
                 </a>
             </div>
 
-            <!-- Mobile Menu Toggle Button -->
-            <button id="mobileMenuBtn" aria-label="Abrir Menu" class="lg:hidden text-slate-800 text-2xl p-2 focus:outline-none">
+            <!-- Mobile Menu Toggle -->
+            <button id="mobileMenuBtn" aria-label="Abrir Menu" class="lg:hidden text-slate-900 text-2xl p-2">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
 
-        <!-- Mobile Navigation Menu Dropdown -->
-        <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-4 flex flex-col gap-4 text-sm font-medium">
-            <a href="#inicio" class="mobile-link text-slate-600 hover:text-electricBlue">Início</a>
-            <a href="#servicos" class="mobile-link text-slate-600 hover:text-electricBlue">Serviços & Áreas</a>
-            <a href="#diferenciais" class="mobile-link text-slate-600 hover:text-electricBlue">Diferenciais</a>
-            <a href="#orcamento" class="mobile-link text-slate-600 hover:text-electricBlue">Calculadora de Orçamento</a>
-            <a href="#contato" class="mobile-link text-slate-600 hover:text-electricBlue">Contato</a>
-            <a href="https://wa.me/5554991377506" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white text-center py-3 rounded-lg flex items-center justify-center gap-2 font-semibold">
-                <i class="fa-brands fa-whatsapp"></i> Chamar no WhatsApp
-            </a>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-4 flex flex-col gap-4 text-sm font-semibold shadow-lg">
+            <a href="#inicio" class="mobile-link text-slate-600 hover:text-brand-blue">Início</a>
+            <a href="#servicos" class="mobile-link text-slate-600 hover:text-brand-blue">Serviços</a>
+            <a href="#diferenciais" class="mobile-link text-slate-600 hover:text-brand-blue">Estrutura de Bancada</a>
+            <a href="#orcamento" class="mobile-link text-slate-600 hover:text-brand-blue">Simulador de Orçamento</a>
+            <a href="#contato" class="mobile-link text-slate-600 hover:text-brand-blue">Contato</a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="inicio" class="relative circuit-bg py-16 lg:py-24 overflow-hidden border-b border-slate-200">
+    <section id="inicio" class="relative circuit-bg-light py-16 lg:py-24 overflow-hidden border-b border-slate-200">
         <div class="max-w-5xl mx-auto px-4 sm:px-8 text-center space-y-6 relative z-10">
             
-            <div class="inline-flex items-center gap-2 bg-white border border-slate-200 shadow-sm text-electricBlue text-xs font-bold px-4 py-2 rounded-full">
-                <i class="fa-solid fa-certificate"></i>
-                <span>Engenharia & Instalações Elétricas Especializadas</span>
+            <!-- Tag Badge -->
+            <div class="inline-flex items-center gap-2 bg-white border border-slate-200 shadow-sm text-brand-blue text-xs font-bold px-4 py-2 rounded-full">
+                <i class="fa-solid fa-microchip"></i>
+                <span>Engenharia de Ponta e Execução Técnica</span>
             </div>
 
+            <!-- Main Title -->
             <h1 class="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-slate-900 tracking-tight leading-tight">
-                Soluções Elétricas do <span class="text-electricBlue">Residencial</span> ao <span class="text-amberGlow">Industrial</span>
+                Soluções Inteligentes: <br class="hidden md:block">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-cyan">Do Simples ao Complexo.</span>
             </h1>
 
+            <!-- Subtitle -->
             <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto font-medium">
-                Da instalação elétrica da sua casa e manutenção de placas solares, até à infraestrutura, automação e programação de robôs na sua indústria.
+                Atendimento técnico completo, abrangendo do <strong class="text-slate-800">residencial ao comercial e industrial</strong>. Projetos elétricos, placas solares, automação avançada e reparos laboratoriais em um só lugar.
             </p>
 
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
                 <a href="https://wa.me/5554991377506" target="_blank" 
-                   class="w-full sm:w-auto bg-electricBlue hover:bg-sky-600 text-white font-heading font-bold text-sm sm:text-base py-3.5 px-8 rounded-lg shadow-lg shadow-sky-600/30 flex items-center justify-center gap-3 transition-all hover:scale-105">
+                   class="w-full sm:w-auto bg-brand-blue hover:bg-sky-600 text-white font-heading font-bold text-sm sm:text-base py-4 px-8 rounded-xl shadow-lg shadow-brand-blue/30 flex items-center justify-center gap-3 transition-all hover:-translate-y-1">
                     <i class="fa-brands fa-whatsapp text-xl"></i>
-                    <span>Solicitar Orçamento</span>
+                    <span>Solicitar Avaliação Técnica</span>
                 </a>
 
                 <a href="#orcamento" 
-                   class="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 shadow-sm text-sm sm:text-base font-semibold py-3.5 px-8 rounded-lg flex items-center justify-center gap-2 transition-all">
-                    <i class="fa-solid fa-sliders text-amberGlow"></i>
-                    <span>Simular Serviço</span>
+                   class="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 text-sm sm:text-base font-bold py-3.5 px-8 rounded-xl flex items-center justify-center gap-2 transition-all hover:-translate-y-1 shadow-sm">
+                    <i class="fa-solid fa-sliders text-brand-blue"></i>
+                    <span>Simular Escopo</span>
                 </a>
             </div>
-
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="servicos" class="py-16 lg:py-24 bg-slate-50 border-b border-slate-200">
+    <section id="servicos" class="py-16 lg:py-24 bg-white border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-8">
             
             <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
-                <h2 class="text-xs font-bold text-electricBlue tracking-widest uppercase">Especialidades</h2>
+                <h2 class="text-xs font-bold text-brand-blue tracking-widest uppercase">Nosso Portfólio de Atuação</h2>
                 <p class="font-heading font-black text-3xl sm:text-4xl text-slate-900">
-                    Áreas de Atuação
+                    Tecnologia para Todos os Níveis
+                </p>
+                <p class="text-slate-600 text-base font-medium">
+                    Cobertura técnica integral: da manutenção da sua residência ou comércio até a eficiência de placas solares e robótica industrial.
                 </p>
             </div>
 
-            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12">
-                <button onclick="filterServices('todos')" id="tab-todos" class="tab-btn active bg-electricBlue text-white font-bold text-xs sm:text-sm py-2.5 px-5 rounded-lg transition-all shadow-md">
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
+                <button onclick="filterServices('todos')" id="tab-todos" class="tab-btn active bg-slate-800 text-white font-bold text-xs sm:text-sm py-2.5 px-5 rounded-full transition-all shadow-md">
                     Todos
                 </button>
-                <button onclick="filterServices('residencial')" id="tab-residencial" class="tab-btn bg-white text-slate-600 border border-slate-300 font-bold text-xs sm:text-sm py-2.5 px-5 rounded-lg hover:border-electricBlue transition-all">
-                    Residencial & Predial
+                <button onclick="filterServices('residencial')" id="tab-residencial" class="tab-btn bg-slate-100 text-slate-600 font-semibold text-xs sm:text-sm py-2.5 px-5 rounded-full hover:bg-slate-200 transition-all">
+                    <i class="fa-solid fa-house-plug mr-1 text-slate-800"></i> Residencial & Predial
                 </button>
-                <button onclick="filterServices('solar')" id="
+                <button onclick="filterServices('comercial')" id="tab-comercial" class="tab-btn bg-slate-100 text-slate-600 font-semibold text-xs sm:text-sm py-2.5 px-5 rounded-full hover:bg-slate-200 transition-all">
+                    <i class="fa-solid fa-city mr-1 text-brand-blue"></i> Comercial
+                </button>
+                <button onclick="filterServices('industrial')" id="tab-industrial" class="tab-btn bg-slate-100 text-slate-600 font-semibold text-xs sm:text-sm py-2.5 px-5 rounded-full hover:bg-slate-200 transition-all">
+                    <i class="fa-solid fa-industry mr-1 text-slate-800"></i> Industrial & Automação
+                </button>
+                <button onclick="filterServices('solar')" id="tab-solar" class="tab-btn bg-slate-100 text-slate-600 font-semibold text-xs sm:text-sm py-2.5 px-5 rounded-full hover:bg-slate-200 transition-all">
+                    <i class="fa-solid fa-solar-panel mr-1 text-amber-500"></i> Placas Solares
+                </button>
+            </div>
+
+            <!-- Services Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="servicesGrid">
+                
+                <!-- Card 1: Residencial -->
+                <div class="service-card residencial bg-white border border-slate-200 rounded-2xl p-8 transition-all duration-300 glow-effect relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-slate-300 to-slate-400"></div>
+                    <div class="w-12 h-12 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-house-chimney-crack"></i>
+                    </div>
+                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-2">Estrutura Básica</span>
+                    <h3 class="font-heading font-bold text-xl text-slate-900 mb-3">Elétrica Residencial</h3>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                        Soluções seguras para o seu lar. Diagnóstico de falhas, correções de curto-circuito e adequação de cargas.
+                    </p>
+                    <ul class="text-sm text-slate-600 space-y-3 border-t border-slate-100 pt-5">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-brand-blue mt-1"></i> Instalação de chuveiros e iluminação</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-brand-blue mt-1"></i> Troca de fiação e quadros elétricos</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-brand-blue mt-1"></i> Automação Smart Home (Casa Inteligente)</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: Comercial & Predial -->
+                <div class="service-card comercial bg-white border border-slate-200 rounded-2xl p-8 transition-all duration-300 glow-effect relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-blue to-brand-cyan"></div>
+                    <div class="w-12 h-12 rounded-xl bg-sky-50 border border-sky-100 text-brand-blue flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-city"></i>
+                    </div>
+                    <span class="text-[10px] font-bold text-brand-blue uppercase tracking-widest block mb-2">Estrutura Intermediária</span>
+                    <h3 class="font-heading font-bold text-xl text-slate-900 mb-3">Comercial & Predial</h3>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                        Infraestrutura robusta para lojas, clínicas e condomínios que exigem estabilidade elétrica contínua.
+                    </p>
+                    <ul class="text-sm text-slate-600 space-y-3 border-t border-slate-100 pt-5">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-brand-blue mt-1"></i> Montagem e balanceamento de Quadros (QDC)</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-brand-blue mt-1"></i> Redes estabilizadas e no-breaks</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-brand-blue mt-1"></i> Projetos de iluminação comercial e vitrines</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3: Placas Solares (NOVO) -->
+                <div class="service-card solar comercial residencial industrial bg-white border border-slate-200 rounded-2xl p-8 transition-all duration-300 glow-effect relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-400 to-amber-500"></div>
+                    <div class="w-12 h-12 rounded-xl bg-amber-50 border border-amber-100 text-amber-500 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-solar-panel"></i>
+                    </div>
+                    <span class="text-[10px] font-bold text-amber-600 uppercase tracking-widest block mb-2">Eficiência & Economia</span>
+                    <h3 class="font-heading font-bold text-xl text-slate-900 mb-3">Placas Solares</h3>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                        Projetos, instalação e manutenção de sistemas de energia solar fotovoltaica. Do residencial ao usinas comerciais.
+                    </p>
+                    <ul class="text-sm text-slate-600 space-y-3 border-t border-slate-100 pt-5">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-brand-blue mt-1"></i> Instalação de painéis On-Grid e Off-Grid</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-brand-blue mt-1"></i> Configuração de Inversores e Microinversores</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-brand-blue mt-1"></i> Limpeza e manutenção preventiva do sistema</li>
+                    </ul>
+                </div>
+
+                <!-- Card 4: Industrial -->
+                <div class="service-card industrial bg-white border border-slate-200 rounded-2xl p-8 transition-all duration-300 glow-effect relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-slate-700 to-slate-900"></div>
+                    <div class="w-12 h-12 rounded-xl bg-slate-100 border border-slate-200 text-slate-800 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-industry"></i>
+                    </div>
+                    <span class="text-[10px] font-bold text-slate-600 uppercase tracking-widest block mb-2">Alta Capacidade</span>
+                    <h
