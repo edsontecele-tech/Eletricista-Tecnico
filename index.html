@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ELETRICISTA TÉCNICO | Serviços Elétricos em Marau e Região</title>
+  <title>ELETRICISTA TÉCNICO | Soluções Elétricas e Eletrônicas</title>
   <meta name="description" content="Serviços elétricos residenciais, comerciais, rurais e industriais. Instalações, manutenção, automação e diagnóstico técnico em Marau e região.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="ELETRICISTA TÉCNICO">
@@ -35,233 +35,328 @@
     }
     .accent-line { border-left:4px solid #f5b900; }
     .service-card { transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease; }
-    .service-card:hover { transform:translateY(-4px); border-color:#f5b900; box-shadow:0 12px 32px rgba(0,0,0,.22); }
+    .service-card:hover { transform:translateY(-4px); border-color:#f5b900; box-shadow:0 12px 32px rgba(0,0,0,.3); }
     .tab-btn.active { background:#f5b900; color:#17191c; border-color:#f5b900; }
     .focus-yellow:focus { outline:none; border-color:#f5b900; box-shadow:0 0 0 3px rgba(245,185,0,.13); }
-    .illustrative-note { color:#92979d; font-size:11px; }
   </style>
 </head>
 <body class="bg-graphite-950 text-slate-100 font-sans antialiased selection:bg-signal selection:text-graphite-950">
 
-  <div class="bg-black/40 border-b border-white/10 text-xs text-slate-400 px-4 py-2">
-    <div class="max-w-7xl mx-auto flex flex-wrap justify-between gap-2">
-      <span><i class="fa-regular fa-clock text-signal mr-2"></i>Atendimento programado e emergencial mediante disponibilidade</span>
-      <a href="#orcamento" class="hover:text-signal transition"><i class="fa-solid fa-calculator mr-1"></i>Solicitar orçamento</a>
+  <!-- Top Bar -->
+  <div class="bg-black/60 border-b border-white/10 text-xs text-slate-300 px-4 py-2.5">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-4">
+        <span><i class="fa-solid fa-location-dot text-signal mr-1.5"></i>Marau e Região</span>
+        <span class="hidden sm:inline text-white/20">|</span>
+        <span class="hidden sm:inline"><i class="fa-solid fa-shield-halved text-signal mr-1.5"></i>Atendimento com Qualidade e Segurança</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="tel:54991377506" class="hover:text-signal transition font-semibold text-white"><i class="fa-solid fa-phone text-signal mr-1.5"></i>(54) 99137-7506</a>
+        <a href="https://wa.me/5554991377506?text=Ol%C3%A1!%20Encontrei%20seu%20site%20e%20gostaria%20de%20atendimento." target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-1.5 rounded-lg font-bold flex items-center gap-1.5 transition text-xs shadow">
+          <i class="fa-brands fa-whatsapp text-sm"></i> Fale Conosco pelo WhatsApp
+        </a>
+      </div>
     </div>
   </div>
 
+  <!-- Header / Navbar -->
   <header class="sticky top-0 z-50 bg-graphite-950/95 backdrop-blur border-b border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
       <a href="#inicio" class="flex items-center gap-3 min-w-0">
-        <span class="w-11 h-11 rounded-xl bg-signal text-graphite-950 flex items-center justify-center text-xl shadow-lg"><i class="fa-solid fa-bolt"></i></span>
+        <span class="w-12 h-12 rounded-xl bg-signal text-graphite-950 flex items-center justify-center text-2xl shadow-lg shadow-signal/20"><i class="fa-solid fa-bolt"></i></span>
         <span class="min-w-0">
-          <strong class="font-heading font-extrabold tracking-wide text-white block text-base sm:text-lg leading-tight">ELETRICISTA TÉCNICO</strong>
-          <small class="text-[10px] sm:text-xs text-slate-400 tracking-wider">SOLUÇÕES ELÉTRICAS</small>
+          <strong class="font-heading font-black tracking-wide text-white block text-base sm:text-xl leading-tight">ELETRICISTA TÉCNICO</strong>
+          <small class="text-[10px] sm:text-xs text-slate-400 tracking-wider">Soluções elétricas e eletrônicas para sua casa e sua empresa.</small>
         </span>
       </a>
-      <nav class="hidden lg:flex items-center gap-6 text-sm text-slate-300">
-        <a class="hover:text-signal" href="#inicio">Início</a>
-        <a class="hover:text-signal" href="#servicos">Serviços</a>
-        <a class="hover:text-signal" href="#diferenciais">Diferenciais</a>
-        <a class="hover:text-signal" href="#bancada">Bancada</a>
-        <a class="hover:text-signal" href="#contato">Contato</a>
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-300">
+        <a class="hover:text-signal transition" href="#inicio"><i class="fa-solid fa-house text-signal mr-1"></i> Início</a>
+        <a class="hover:text-signal transition" href="#servicos">Serviços</a>
+        <a class="hover:text-signal transition" href="#diferenciais">Diferenciais</a>
+        <a class="hover:text-signal transition" href="#bancada">Bancada</a>
+        <a class="hover:text-signal transition" href="#orcamento">Calculadora</a>
+        <a class="hover:text-signal transition" href="#contato">Contato</a>
       </nav>
-      <a href="https://wa.me/5554991377506?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm px-4 py-3 rounded-lg items-center gap-2 transition">
-        <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp
-      </a>
       <button id="mobileMenuBtn" class="lg:hidden text-2xl p-2 text-slate-200" aria-label="Abrir menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
     </div>
     <nav id="mobileMenu" class="hidden lg:hidden border-t border-white/10 bg-graphite-900 px-5 py-5 flex-col gap-4 text-sm">
-      <a class="mobile-link" href="#inicio">Início</a><a class="mobile-link" href="#servicos">Serviços</a>
-      <a class="mobile-link" href="#diferenciais">Diferenciais</a><a class="mobile-link" href="#bancada">Bancada</a>
-      <a class="mobile-link" href="#orcamento">Orçamento</a><a class="mobile-link" href="#contato">Contato</a>
+      <a class="mobile-link hover:text-signal" href="#inicio">Início</a>
+      <a class="mobile-link hover:text-signal" href="#servicos">Serviços</a>
+      <a class="mobile-link hover:text-signal" href="#diferenciais">Diferenciais</a>
+      <a class="mobile-link hover:text-signal" href="#bancada">Bancada</a>
+      <a class="mobile-link hover:text-signal" href="#orcamento">Calculadora / Orçamento</a>
+      <a class="mobile-link hover:text-signal" href="#contato">Contato</a>
       <a href="https://wa.me/5554991377506" target="_blank" rel="noopener noreferrer" class="bg-emerald-600 text-white rounded-lg p-3 text-center font-semibold"><i class="fa-brands fa-whatsapp mr-2"></i>Chamar no WhatsApp</a>
     </nav>
   </header>
 
   <main>
-    <section id="inicio" class="hero-pattern border-b border-white/10 py-20 lg:py-28">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
-        <span class="inline-flex items-center gap-2 border border-signal/40 bg-signal/10 text-signal rounded-full px-4 py-2 text-xs sm:text-sm font-semibold mb-7">
-          <i class="fa-solid fa-bolt"></i> Atendimento técnico em Marau e região
-        </span>
-        <h1 class="font-heading font-black text-4xl sm:text-5xl lg:text-6xl leading-tight tracking-tight">
-          Soluções elétricas<br><span class="text-signal">do simples ao complexo.</span>
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-pattern border-b border-white/10 py-20 lg:py-28 relative overflow-hidden">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-10">
+        <h1 class="font-heading font-black text-4xl sm:text-6xl lg:text-7xl leading-tight tracking-tight text-white drop-shadow-lg">
+          Soluções Inteligentes:<br><span class="text-signal drop-shadow-[0_0_25px_rgba(245,185,0,0.3)]">Do Simples ao Complexo.</span>
         </h1>
-        <p class="max-w-3xl mx-auto mt-6 text-slate-300 text-base sm:text-lg leading-relaxed">
-          Serviços e manutenção elétrica para <strong class="text-white">residências, comércios, propriedades rurais e indústrias</strong>. Instalações, diagnóstico de falhas, automação e soluções técnicas.
+        <p class="max-w-3xl mx-auto mt-6 text-slate-200 text-lg sm:text-xl font-medium leading-relaxed">
+          Atendimento residencial, predial, comercial, rural e industrial, com qualidade, segurança e conhecimento técnico.
         </p>
-        <div class="mt-9 flex flex-col sm:flex-row justify-center gap-3">
-          <a href="https://wa.me/5554991377506?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="bg-signal hover:bg-yellow-400 text-graphite-950 font-bold rounded-xl px-7 py-4 transition"><i class="fa-brands fa-whatsapp mr-2"></i>Solicitar orçamento</a>
-          <a href="#servicos" class="border border-white/20 hover:border-signal text-white font-semibold rounded-xl px-7 py-4 transition"><i class="fa-solid fa-arrow-down mr-2 text-signal"></i>Conhecer serviços</a>
-        </div>
-        <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl mx-auto text-sm">
-          <div class="bg-black/25 border border-white/10 rounded-lg p-3"><i class="fa-solid fa-house text-signal block text-xl mb-2"></i>Residencial</div>
-          <div class="bg-black/25 border border-white/10 rounded-lg p-3"><i class="fa-solid fa-store text-signal block text-xl mb-2"></i>Comercial</div>
-          <div class="bg-black/25 border border-white/10 rounded-lg p-3"><i class="fa-solid fa-tractor text-signal block text-xl mb-2"></i>Rural</div>
-          <div class="bg-black/25 border border-white/10 rounded-lg p-3"><i class="fa-solid fa-industry text-signal block text-xl mb-2"></i>Industrial</div>
+        <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+          <a href="#servicos" class="bg-signal hover:bg-yellow-400 text-graphite-950 font-extrabold rounded-xl px-8 py-4 transition shadow-lg shadow-signal/20 flex items-center justify-center gap-2">
+            Conheça nossos serviços <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="https://wa.me/5554991377506?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="border-2 border-emerald-500 bg-emerald-600/20 hover:bg-emerald-600 text-white font-bold rounded-xl px-8 py-4 transition flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-xl text-emerald-400 group-hover:text-white"></i> Orçamento via WhatsApp
+          </a>
         </div>
       </div>
     </section>
 
+    <!-- Services Grid Section -->
     <section id="servicos" class="py-16 lg:py-24 bg-graphite-950 border-b border-white/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6">
-        <div class="max-w-3xl mx-auto text-center mb-10">
-          <p class="text-signal uppercase tracking-[.2em] text-xs font-bold">O que eu faço</p>
-          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl mt-3">Serviços e áreas de atuação</h2>
-          <p class="text-slate-400 mt-4">Atendimento técnico para diferentes necessidades, do reparo residencial à manutenção de sistemas industriais.</p>
+        <div class="max-w-3xl mx-auto text-center mb-12">
+          <p class="text-signal uppercase tracking-[.25em] text-xs font-bold">Áreas de Atuação</p>
+          <h2 class="font-heading font-extrabold text-3xl sm:text-5xl mt-3 text-white">Nossos Serviços</h2>
+          <p class="text-slate-400 mt-4 text-sm sm:text-base">Clique em qualquer serviço para ver a imagem ilustrativa detalhada e solicitar atendimento.</p>
         </div>
-        <div class="flex flex-wrap justify-center gap-2 mb-8">
-          <button class="tab-btn active border border-white/15 rounded-lg px-4 py-2 text-xs sm:text-sm font-semibold" data-filter="todos">Todos</button>
-          <button class="tab-btn border border-white/15 rounded-lg px-4 py-2 text-xs sm:text-sm font-semibold" data-filter="residencial">Residencial e comercial</button>
-          <button class="tab-btn border border-white/15 rounded-lg px-4 py-2 text-xs sm:text-sm font-semibold" data-filter="industrial">Industrial</button>
-          <button class="tab-btn border border-white/15 rounded-lg px-4 py-2 text-xs sm:text-sm font-semibold" data-filter="solar">Energia solar</button>
-          <button class="tab-btn border border-white/15 rounded-lg px-4 py-2 text-xs sm:text-sm font-semibold" data-filter="rural">Rural</button>
-          <button class="tab-btn border border-white/15 rounded-lg px-4 py-2 text-xs sm:text-sm font-semibold" data-filter="automacao">Automação</button>
-          <button class="tab-btn border border-white/15 rounded-lg px-4 py-2 text-xs sm:text-sm font-semibold" data-filter="eletronica">Eletrônica</button>
-        </div>
-        <div id="servicesGrid" class="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
-          <article class="service-card residencial bg-graphite-800 border border-white/10 rounded-xl p-6">
-            <div class="w-12 h-12 rounded-lg bg-signal/10 text-signal flex items-center justify-center text-2xl mb-4"><i class="fa-solid fa-house-chimney"></i></div>
-            <p class="text-signal text-xs uppercase tracking-widest font-bold">Residencial, predial e comercial</p>
-            <h3 class="font-heading font-bold text-xl mt-2">Instalações e reparos elétricos</h3>
-            <p class="text-slate-400 text-sm leading-relaxed mt-3">Manutenção e adequações elétricas em casas, apartamentos, condomínios e estabelecimentos comerciais.</p>
-            <ul class="text-sm text-slate-300 mt-4 space-y-2"><li><i class="fa-solid fa-check text-signal mr-2"></i>Tomadas, interruptores e iluminação</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Chuveiros e circuitos dedicados</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Quadros, disjuntores, IDR e DPS</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Identificação de falhas e curto-circuitos</li></ul>
-            <a class="inline-block mt-5 text-signal text-sm font-bold hover:underline" href="#orcamento" data-service="Instalações e reparos elétricos">Solicitar atendimento <i class="fa-solid fa-arrow-right ml-1"></i></a>
+
+        <div id="servicesGrid" class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+          
+          <!-- Card 1 -->
+          <article class="service-card residencial bg-graphite-800 border border-white/10 rounded-2xl overflow-hidden cursor-pointer group" onclick="openModal('Manutenção Industrial e Diagnóstico Avançado', 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80', 'Diagnóstico de falhas elétricas, manutenção de painéis e comandos industriais para mitigar paradas de produção.')">
+            <div class="h-48 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Manutenção Industrial" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-graphite-800 via-transparent to-transparent"></div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading font-bold text-xl text-white group-hover:text-signal transition">Manutenção Industrial e Diagnóstico Avançado</h3>
+              <p class="text-slate-400 text-sm mt-2 line-clamp-2">Painéis elétricos, inversores e suporte técnico especializado para indústrias.</p>
+              <div class="mt-5 flex items-center justify-between">
+                <span class="text-signal text-xs font-bold uppercase tracking-wider">Ver detalhes</span>
+                <span class="w-9 h-9 rounded-full bg-signal text-graphite-950 flex items-center justify-center font-bold group-hover:scale-110 transition"><i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </div>
           </article>
-          <article class="service-card industrial bg-graphite-800 border border-white/10 rounded-xl p-6">
-            <div class="w-12 h-12 rounded-lg bg-signal/10 text-signal flex items-center justify-center text-2xl mb-4"><i class="fa-solid fa-gears"></i></div>
-            <p class="text-signal text-xs uppercase tracking-widest font-bold">Indústria e máquinas</p>
-            <h3 class="font-heading font-bold text-xl mt-2">Manutenção industrial</h3>
-            <p class="text-slate-400 text-sm leading-relaxed mt-3">Diagnóstico de falhas elétricas, manutenção de máquinas e suporte para reduzir paradas de produção.</p>
-            <ul class="text-sm text-slate-300 mt-4 space-y-2"><li><i class="fa-solid fa-check text-signal mr-2"></i>Comandos elétricos e painéis</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Sensores e dispositivos de campo</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Inversores de frequência</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Manutenção corretiva e preventiva</li></ul>
-            <a class="inline-block mt-5 text-signal text-sm font-bold hover:underline" href="#orcamento" data-service="Manutenção industrial">Solicitar atendimento <i class="fa-solid fa-arrow-right ml-1"></i></a>
+
+          <!-- Card 2 -->
+          <article class="service-card solar bg-graphite-800 border border-white/10 rounded-2xl overflow-hidden cursor-pointer group" onclick="openModal('Energia Solar & Placas Fotovoltaicas', 'https://images.unsplash.com/photo-1509391365360-804245645364?auto=format&fit=crop&w=800&q=80', 'Inspeção, manutenção preventiva e corretiva de sistemas fotovoltaicos, inversores e proteções elétricas CC/CA.')">
+            <div class="h-48 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1509391365360-804245645364?auto=format&fit=crop&w=600&q=80" alt="Energia Solar" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-graphite-800 via-transparent to-transparent"></div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading font-bold text-xl text-white group-hover:text-signal transition">Energia Solar & Placas Fotovoltaicas</h3>
+              <p class="text-slate-400 text-sm mt-2 line-clamp-2">Manutenção e testes em sistemas de geração solar para máxima eficiência.</p>
+              <div class="mt-5 flex items-center justify-between">
+                <span class="text-signal text-xs font-bold uppercase tracking-wider">Ver detalhes</span>
+                <span class="w-9 h-9 rounded-full bg-signal text-graphite-950 flex items-center justify-center font-bold group-hover:scale-110 transition"><i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </div>
           </article>
-          <article class="service-card solar bg-graphite-800 border border-white/10 rounded-xl p-6">
-            <div class="w-12 h-12 rounded-lg bg-signal/10 text-signal flex items-center justify-center text-2xl mb-4"><i class="fa-solid fa-solar-panel"></i></div>
-            <p class="text-signal text-xs uppercase tracking-widest font-bold">Energia e sustentabilidade</p>
-            <h3 class="font-heading font-bold text-xl mt-2">Sistemas fotovoltaicos</h3>
-            <p class="text-slate-400 text-sm leading-relaxed mt-3">Serviços relacionados a sistemas de energia solar, conforme escopo técnico e habilitações aplicáveis.</p>
-            <ul class="text-sm text-slate-300 mt-4 space-y-2"><li><i class="fa-solid fa-check text-signal mr-2"></i>Inspeção e diagnóstico</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Manutenção de componentes</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Proteções elétricas CC/CA</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Avaliação de falhas e desempenho</li></ul>
-            <a class="inline-block mt-5 text-signal text-sm font-bold hover:underline" href="#orcamento" data-service="Serviço em sistema fotovoltaico">Solicitar atendimento <i class="fa-solid fa-arrow-right ml-1"></i></a>
+
+          <!-- Card 3 -->
+          <article class="service-card residencial bg-graphite-800 border border-white/10 rounded-2xl overflow-hidden cursor-pointer group" onclick="openModal('Instalações e Reparos Elétricos', 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80', 'Projetos, instalações e manutenções residenciais, prediais e comerciais completas com segurança e conformidade normativa.')">
+            <div class="h-48 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Instalações Residenciais" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-graphite-800 via-transparent to-transparent"></div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading font-bold text-xl text-white group-hover:text-signal transition">Instalações e Reparos Elétricos (Residencial / Predial / Comercial)</h3>
+              <p class="text-slate-400 text-sm mt-2 line-clamp-2">Quadros de distribuição, disjuntores, tomadas, iluminação e adequações gerais.</p>
+              <div class="mt-5 flex items-center justify-between">
+                <span class="text-signal text-xs font-bold uppercase tracking-wider">Ver detalhes</span>
+                <span class="w-9 h-9 rounded-full bg-signal text-graphite-950 flex items-center justify-center font-bold group-hover:scale-110 transition"><i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </div>
           </article>
-          <article class="service-card rural bg-graphite-800 border border-white/10 rounded-xl p-6">
-            <div class="w-12 h-12 rounded-lg bg-signal/10 text-signal flex items-center justify-center text-2xl mb-4"><i class="fa-solid fa-tractor"></i></div>
-            <p class="text-signal text-xs uppercase tracking-widest font-bold">Propriedades rurais</p>
-            <h3 class="font-heading font-bold text-xl mt-2">Elétrica rural e agrícola</h3>
-            <p class="text-slate-400 text-sm leading-relaxed mt-3">Soluções elétricas para propriedades rurais, instalações, motores, bombas e equipamentos agrícolas.</p>
-            <ul class="text-sm text-slate-300 mt-4 space-y-2"><li><i class="fa-solid fa-check text-signal mr-2"></i>Bombas e sistemas de irrigação</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Acionamento de motores</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Quadros e proteções</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Diagnóstico de problemas elétricos</li></ul>
-            <a class="inline-block mt-5 text-signal text-sm font-bold hover:underline" href="#orcamento" data-service="Elétrica rural e agrícola">Solicitar atendimento <i class="fa-solid fa-arrow-right ml-1"></i></a>
+
+          <!-- Card 4 -->
+          <article class="service-card rural bg-graphite-800 border border-white/10 rounded-2xl overflow-hidden cursor-pointer group" onclick="openModal('Elétrica Rural & Agrícola', 'https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=800&q=80', 'Soluções elétricas robustas para propriedades rurais, sistemas de irrigação, acionamento de motores e bombas.')">
+            <div class="h-48 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=600&q=80" alt="Elétrica Rural" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-graphite-800 via-transparent to-transparent"></div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading font-bold text-xl text-white group-hover:text-signal transition">Elétrica Rural & Agrícola</h3>
+              <p class="text-slate-400 text-sm mt-2 line-clamp-2">Manutenção em redes agrícolas, motores, painéis de bombeamento e instalações no campo.</p>
+              <div class="mt-5 flex items-center justify-between">
+                <span class="text-signal text-xs font-bold uppercase tracking-wider">Ver detalhes</span>
+                <span class="w-9 h-9 rounded-full bg-signal text-graphite-950 flex items-center justify-center font-bold group-hover:scale-110 transition"><i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </div>
           </article>
-          <article class="service-card automacao bg-graphite-800 border border-white/10 rounded-xl p-6">
-            <div class="w-12 h-12 rounded-lg bg-signal/10 text-signal flex items-center justify-center text-2xl mb-4"><i class="fa-solid fa-microchip"></i></div>
-            <p class="text-signal text-xs uppercase tracking-widest font-bold">Controle e automação</p>
-            <h3 class="font-heading font-bold text-xl mt-2">Automação e acionamentos</h3>
-            <p class="text-slate-400 text-sm leading-relaxed mt-3">Análise e suporte em sistemas de controle e acionamento, conforme equipamento e projeto.</p>
-            <ul class="text-sm text-slate-300 mt-4 space-y-2"><li><i class="fa-solid fa-check text-signal mr-2"></i>CLPs e IHMs</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Inversores e soft-starters</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Comandos e lógica de controle</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Diagnóstico de comunicação</li></ul>
-            <a class="inline-block mt-5 text-signal text-sm font-bold hover:underline" href="#orcamento" data-service="Automação e acionamentos">Solicitar atendimento <i class="fa-solid fa-arrow-right ml-1"></i></a>
+
+          <!-- Card 5 -->
+          <article class="service-card automacao bg-graphite-800 border border-white/10 rounded-2xl overflow-hidden cursor-pointer group" onclick="openModal('Automação, Programação & Robótica', 'https://images.unsplash.com/photo-1537462715879-363eeb61a3ad?auto=format&fit=crop&w=800&q=80', 'Suporte em sistemas automatizados, CLPs, IHMs, inversores de frequência e robótica industrial.')">
+            <div class="h-48 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1537462715879-363eeb61a3ad?auto=format&fit=crop&w=600&q=80" alt="Automação e Robótica" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-graphite-800 via-transparent to-transparent"></div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading font-bold text-xl text-white group-hover:text-signal transition">Automação, Programação & Robótica</h3>
+              <p class="text-slate-400 text-sm mt-2 line-clamp-2">Integração e solução de falhas em processos automatizados e linhas produtivas.</p>
+              <div class="mt-5 flex items-center justify-between">
+                <span class="text-signal text-xs font-bold uppercase tracking-wider">Ver detalhes</span>
+                <span class="w-9 h-9 rounded-full bg-signal text-graphite-950 flex items-center justify-center font-bold group-hover:scale-110 transition"><i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </div>
           </article>
-          <article class="service-card eletronica bg-graphite-800 border border-white/10 rounded-xl p-6">
-            <div class="w-12 h-12 rounded-lg bg-signal/10 text-signal flex items-center justify-center text-2xl mb-4"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-            <p class="text-signal text-xs uppercase tracking-widest font-bold">Diagnóstico técnico</p>
-            <h3 class="font-heading font-bold text-xl mt-2">Eletrônica e reparos em bancada</h3>
-            <p class="text-slate-400 text-sm leading-relaxed mt-3">Avaliação de equipamentos e placas eletrônicas. O reparo depende de análise prévia e disponibilidade de componentes.</p>
-            <ul class="text-sm text-slate-300 mt-4 space-y-2"><li><i class="fa-solid fa-check text-signal mr-2"></i>Fontes e placas eletrônicas</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Carregadores e módulos</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Diagnóstico de componentes</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Avaliação de viabilidade do conserto</li></ul>
-            <a class="inline-block mt-5 text-signal text-sm font-bold hover:underline" href="#orcamento" data-service="Diagnóstico eletrônico em bancada">Solicitar avaliação <i class="fa-solid fa-arrow-right ml-1"></i></a>
+
+          <!-- Card 6 -->
+          <article class="service-card eletronica bg-graphite-800 border border-white/10 rounded-2xl overflow-hidden cursor-pointer group" onclick="openModal('Reparo Laboratorial de Placas & Inversores', 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80', 'Análise minuciosa em bancada de placas eletrônicas, fontes, módulos e inversores com instrumentação avançada.')">
+            <div class="h-48 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="Reparo Eletrônico" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-graphite-800 via-transparent to-transparent"></div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading font-bold text-xl text-white group-hover:text-signal transition">Reparo Laboratorial de Placas & Inversores</h3>
+              <p class="text-slate-400 text-sm mt-2 line-clamp-2">Diagnóstico eletrônico avançado em bancada para recuperação de componentes.</p>
+              <div class="mt-5 flex items-center justify-between">
+                <span class="text-signal text-xs font-bold uppercase tracking-wider">Ver detalhes</span>
+                <span class="w-9 h-9 rounded-full bg-signal text-graphite-950 flex items-center justify-center font-bold group-hover:scale-110 transition"><i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </div>
           </article>
+
         </div>
       </div>
     </section>
 
-    <section id="diferenciais" class="py-16 bg-graphite-900 border-b border-white/10">
+    <!-- Nossa Bancada Banner Section -->
+    <section id="bancada" class="py-16 bg-graphite-900 border-b border-white/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-10"><p class="text-signal text-xs uppercase tracking-[.2em] font-bold">Por que contratar</p><h2 class="font-heading text-3xl font-extrabold mt-3">Atendimento técnico com responsabilidade</h2></div>
-        <div class="grid md:grid-cols-3 gap-5">
-          <div class="accent-line bg-graphite-800 rounded-xl p-6"><i class="fa-solid fa-clipboard-check text-signal text-3xl"></i><h3 class="font-heading font-bold text-lg mt-4">Diagnóstico antes da solução</h3><p class="text-slate-400 text-sm mt-2 leading-relaxed">Avaliação do problema e explicação do serviço recomendado antes da execução.</p></div>
-          <div class="accent-line bg-graphite-800 rounded-xl p-6"><i class="fa-solid fa-house-circle-check text-signal text-3xl"></i><h3 class="font-heading font-bold text-lg mt-4">Residencial e industrial</h3><p class="text-slate-400 text-sm mt-2 leading-relaxed">Atendimento para demandas de pequeno porte e necessidades técnicas mais específicas.</p></div>
-          <div class="accent-line bg-graphite-800 rounded-xl p-6"><i class="fa-solid fa-comments text-signal text-3xl"></i><h3 class="font-heading font-bold text-lg mt-4">Contato direto</h3><p class="text-slate-400 text-sm mt-2 leading-relaxed">Converse diretamente pelo WhatsApp para explicar o serviço e combinar uma avaliação.</p></div>
+        <div class="bg-graphite-800 border border-white/10 rounded-3xl overflow-hidden grid lg:grid-cols-2 items-center gap-8 shadow-2xl">
+          <div class="p-8 sm:p-12">
+            <span class="text-signal text-xs uppercase tracking-[.25em] font-bold">Estrutura Profissional</span>
+            <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white mt-3">Nossa Bancada</h2>
+            <p class="text-slate-300 text-base mt-4 leading-relaxed">
+              Equipamentos modernos para diagnóstico preciso e solução eficiente. Contamos com instrumentação especializada (multímetros, osciloscópios, fontes de bancada e ferramentas de precisão) para assegurar o melhor resultado.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="https://wa.me/5554991377506?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20bancada." target="_blank" rel="noopener noreferrer" class="bg-signal hover:bg-yellow-400 text-graphite-950 font-bold rounded-xl px-7 py-3.5 transition flex items-center gap-2">
+                Saiba mais <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+          <div class="h-72 lg:h-full min-h-[300px] relative">
+            <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1000&q=80" alt="Bancada de eletrônica e testes" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-graphite-800 via-transparent to-transparent opacity-80"></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="bancada" class="py-16 bg-graphite-950 border-b border-white/10">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6">
-        <div class="text-center max-w-2xl mx-auto mb-9"><p class="text-signal text-xs uppercase tracking-[.2em] font-bold">Área técnica</p><h2 class="font-heading text-3xl font-extrabold mt-3">Diagnóstico e equipamentos</h2><p class="text-slate-400 mt-3 text-sm">A estrutura e os recursos utilizados variam conforme o tipo de equipamento e serviço solicitado.</p></div>
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-          <div class="bg-graphite-800 border border-white/10 rounded-xl p-4 text-center"><i class="fa-solid fa-gauge-high text-signal text-2xl"></i><p class="font-semibold text-sm mt-3">Multímetro</p><p class="text-xs text-slate-500 mt-1">Medições elétricas</p></div>
-          <div class="bg-graphite-800 border border-white/10 rounded-xl p-4 text-center"><i class="fa-solid fa-wave-square text-signal text-2xl"></i><p class="font-semibold text-sm mt-3">Osciloscópio</p><p class="text-xs text-slate-500 mt-1">Análise de sinais</p></div>
-          <div class="bg-graphite-800 border border-white/10 rounded-xl p-4 text-center"><i class="fa-solid fa-plug text-signal text-2xl"></i><p class="font-semibold text-sm mt-3">Fontes</p><p class="text-xs text-slate-500 mt-1">Testes controlados</p></div>
-          <div class="bg-graphite-800 border border-white/10 rounded-xl p-4 text-center"><i class="fa-solid fa-microchip text-signal text-2xl"></i><p class="font-semibold text-sm mt-3">Placas</p><p class="text-xs text-slate-500 mt-1">Análise eletrônica</p></div>
-          <div class="bg-graphite-800 border border-white/10 rounded-xl p-4 text-center"><i class="fa-solid fa-gears text-signal text-2xl"></i><p class="font-semibold text-sm mt-3">Acionamentos</p><p class="text-xs text-slate-500 mt-1">Inversores e motores</p></div>
-          <div class="bg-graphite-800 border border-white/10 rounded-xl p-4 text-center"><i class="fa-solid fa-code text-signal text-2xl"></i><p class="font-semibold text-sm mt-3">Automação</p><p class="text-xs text-slate-500 mt-1">CLPs e IHMs</p></div>
+    <!-- Bottom Widgets: Calculator & Instagram -->
+    <section class="py-16 bg-graphite-950 border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-6">
+        
+        <!-- Simulador de Orçamento Card -->
+        <div id="orcamento" class="bg-graphite-800 border border-white/10 rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden group">
+          <div class="absolute -right-10 -bottom-10 text-white/5 text-9xl pointer-events-none"><i class="fa-solid fa-calculator"></i></div>
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-signal/10 text-signal flex items-center justify-center text-3xl mb-6"><i class="fa-solid fa-calculator"></i></div>
+            <h3 class="font-heading font-extrabold text-2xl text-white">Simulador de Orçamento</h3>
+            <p class="text-slate-400 text-sm mt-2">Faça uma estimativa rápida do seu serviço informando os dados diretamente para nosso atendimento no WhatsApp.</p>
+          </div>
+          <div class="mt-8">
+            <a href="https://wa.me/5554991377506?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20estimativa%20de%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="w-full bg-signal hover:bg-yellow-400 text-graphite-950 font-bold rounded-xl py-4 transition flex items-center justify-center gap-2 shadow-lg">
+              Acessar Calculadora / Orçamento <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
+
+        <!-- Instagram Card -->
+        <div class="bg-gradient-to-br from-purple-900/40 via-graphite-800 to-graphite-800 border border-white/10 rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden group">
+          <div class="absolute -right-10 -bottom-10 text-white/5 text-9xl pointer-events-none"><i class="fa-brands fa-instagram"></i></div>
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-600 text-white flex items-center justify-center text-3xl mb-6 shadow-lg"><i class="fa-brands fa-instagram"></i></div>
+            <h3 class="font-heading font-extrabold text-2xl text-white">Siga nosso Instagram</h3>
+            <p class="text-slate-400 text-sm mt-2">Acompanhe nosso trabalho diário, bastidores de manutenção, dicas e projetos realizados.</p>
+          </div>
+          <div class="mt-8">
+            <a href="https://www.instagram.com/eletricista.ttecnico?xtok=dm9rbDZodnh5eTUz" target="_blank" rel="noopener noreferrer" class="w-full bg-white hover:bg-slate-100 text-graphite-950 font-bold rounded-xl py-4 transition flex items-center justify-center gap-2 shadow-lg">
+              <i class="fa-brands fa-instagram text-xl text-pink-600"></i> Acessar @eletricista.ttecnico <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <section id="orcamento" class="py-16 hero-pattern border-b border-white/10">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-8"><p class="text-signal text-xs uppercase tracking-[.2em] font-bold">Orçamento rápido</p><h2 class="font-heading text-3xl font-extrabold mt-3">Conte o que você precisa</h2><p class="text-slate-400 mt-3 text-sm">As informações serão organizadas em uma mensagem para você enviar pelo WhatsApp.</p></div>
-        <form id="budgetForm" class="bg-graphite-800 border border-white/10 rounded-2xl p-5 sm:p-8 space-y-5">
-          <div class="grid sm:grid-cols-2 gap-4">
-            <label class="text-xs text-slate-300 font-bold">NOME / EMPRESA *
-              <input id="clientName" required class="focus-yellow w-full mt-2 bg-graphite-950 border border-white/15 rounded-lg p-3 text-sm text-white" placeholder="Seu nome">
-            </label>
-            <label class="text-xs text-slate-300 font-bold">CIDADE / BAIRRO *
-              <input id="clientCity" required class="focus-yellow w-full mt-2 bg-graphite-950 border border-white/15 rounded-lg p-3 text-sm text-white" placeholder="Ex.: Marau - RS">
-            </label>
-          </div>
-          <div class="grid sm:grid-cols-2 gap-4">
-            <label class="text-xs text-slate-300 font-bold">TIPO DE SERVIÇO *
-              <select id="serviceType" class="focus-yellow w-full mt-2 bg-graphite-950 border border-white/15 rounded-lg p-3 text-sm text-white">
-                <option>Instalações e reparos elétricos residenciais/comerciais</option><option>Manutenção industrial</option><option>Energia solar</option><option>Elétrica rural e agrícola</option><option>Automação e acionamentos</option><option>Diagnóstico eletrônico em bancada</option><option>Outro serviço</option>
-              </select>
-            </label>
-            <label class="text-xs text-slate-300 font-bold">PRAZO / URGÊNCIA
-              <select id="urgencyLevel" class="focus-yellow w-full mt-2 bg-graphite-950 border border-white/15 rounded-lg p-3 text-sm text-white">
-                <option>Atendimento programado</option><option>Urgente</option><option>Quero apenas uma avaliação</option>
-              </select>
-            </label>
-          </div>
-          <label class="block text-xs text-slate-300 font-bold">DESCREVA O SERVIÇO OU PROBLEMA *
-            <textarea id="serviceDetails" required rows="4" class="focus-yellow w-full mt-2 bg-graphite-950 border border-white/15 rounded-lg p-3 text-sm text-white" placeholder="Explique o que aconteceu ou o serviço que deseja realizar..."></textarea>
-          </label>
-          <div class="bg-graphite-950 border border-white/10 rounded-xl p-4">
-            <p class="text-xs text-slate-400 mb-2"><i class="fa-regular fa-eye text-signal mr-2"></i>Prévia da mensagem</p>
-            <p id="msgPreview" class="text-xs text-slate-300 whitespace-pre-line leading-relaxed"></p>
-          </div>
-          <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl py-4 transition"><i class="fa-brands fa-whatsapp text-xl mr-2"></i>Enviar solicitação pelo WhatsApp</button>
-          <p class="text-center text-[11px] text-slate-500">O envio será aberto no WhatsApp. O orçamento será avaliado após o contato.</p>
-        </form>
-      </div>
-    </section>
-
-    <section id="contato" class="py-16 bg-graphite-950">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
-        <p class="text-signal text-xs uppercase tracking-[.2em] font-bold">Vamos conversar</p>
-        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold mt-3">Precisa de um eletricista?</h2>
-        <p class="text-slate-400 mt-4 max-w-2xl mx-auto">Entre em contato, explique sua necessidade e combine uma avaliação do serviço.</p>
-        <div class="flex flex-col sm:flex-row justify-center gap-3 mt-8">
-          <a href="https://wa.me/5554991377506?text=Ol%C3%A1!%20Encontrei%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20servi%C3%A7o." target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-500 rounded-xl px-7 py-4 font-bold text-white"><i class="fa-brands fa-whatsapp mr-2"></i>Falar pelo WhatsApp</a>
-          <a href="#orcamento" class="border border-signal text-signal hover:bg-signal hover:text-graphite-950 rounded-xl px-7 py-4 font-bold transition"><i class="fa-solid fa-calculator mr-2"></i>Preencher orçamento</a>
+    <!-- Contato / Rodapé -->
+    <section id="contato" class="py-16 bg-graphite-900 text-center">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <p class="text-signal text-xs uppercase tracking-[.25em] font-bold">Fale Comigo</p>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white mt-2">Precisa de um Eletricista Técnico?</h2>
+        <p class="text-slate-400 mt-3 text-sm sm:text-base">Atendimento profissional e qualificado para resolver sua demanda com segurança.</p>
+        
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <a href="https://wa.me/5554991377506?text=Ol%C3%A1!%20Preciso%20de%20atendimento%20el%C3%A9trico." target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl px-8 py-4 transition flex items-center gap-2 shadow-lg">
+            <i class="fa-brands fa-whatsapp text-xl"></i> Chamar no WhatsApp (54) 99137-7506
+          </a>
         </div>
-        <div class="mt-10 inline-flex items-center gap-3 text-slate-400 text-sm"><i class="fa-solid fa-location-dot text-signal"></i>Marau e região — Rio Grande do Sul</div>
       </div>
     </section>
   </main>
 
-  <footer class="bg-black border-t border-white/10 py-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-5">
-      <div class="flex items-center gap-3"><span class="w-9 h-9 rounded-lg bg-signal text-graphite-950 flex items-center justify-center"><i class="fa-solid fa-bolt"></i></span><div><strong class="font-heading text-sm text-white">ELETRICISTA TÉCNICO</strong><p class="text-xs text-slate-500">Serviços elétricos e manutenção</p></div></div>
-      <p class="text-xs text-slate-500 text-center">© <span id="year"></span> ELETRICISTA TÉCNICO. Todos os direitos reservados.</p>
-      <a href="https://wa.me/5554991377506" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 text-sm font-semibold"><i class="fa-brands fa-whatsapp mr-1"></i>WhatsApp</a>
+  <!-- Footer -->
+  <footer class="bg-black border-t border-white/10 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+      <div class="flex items-center gap-3">
+        <span class="w-10 h-10 rounded-lg bg-signal text-graphite-950 flex items-center justify-center font-bold"><i class="fa-solid fa-bolt"></i></span>
+        <div>
+          <strong class="font-heading text-sm text-white block">ELETRICISTA TÉCNICO</strong>
+          <p class="text-xs text-slate-500">Marau - RS e Região</p>
+        </div>
+      </div>
+      <div class="text-xs text-slate-400 space-y-1">
+        <p><i class="fa-solid fa-envelope text-signal mr-1"></i> contato@eletricistatecnicors.com.br</p>
+        <p><i class="fa-solid fa-globe text-signal mr-1"></i> www.eletricistatecnicors.com.br</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="https://www.instagram.com/eletricista.ttecnico?xtok=dm9rbDZodnh5eTUz" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-graphite-800 hover:bg-signal hover:text-graphite-950 text-white flex items-center justify-center transition" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://wa.me/5554991377506" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-graphite-800 hover:bg-emerald-500 text-white flex items-center justify-center transition" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center mt-8 pt-6 border-t border-white/5 text-xs text-slate-600">
+      © <span id="year"></span> ELETRICISTA TÉCNICO. Todos os direitos reservados.
     </div>
   </footer>
 
-  <a href="https://wa.me/5554991377506?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" aria-label="Falar pelo WhatsApp" class="fixed bottom-5 right-5 z-40 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center text-3xl shadow-2xl transition hover:scale-105"><i class="fa-brands fa-whatsapp"></i></a>
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/5554991377506?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" aria-label="Falar pelo WhatsApp" class="fixed bottom-6 right-6 z-40 w-16 h-16 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center text-4xl shadow-2xl transition hover:scale-110">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- MODAL DE SERVIÇO / IMAGEM ILUSTRATIVA -->
+  <div id="serviceModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-graphite-900 border border-white/15 rounded-3xl max-w-xl w-full overflow-hidden shadow-2xl animate-in fade-in zoom-in duration-200">
+      <div class="relative h-64 sm:h-72">
+        <img id="modalImg" src="" alt="Serviço" class="w-full h-full object-cover">
+        <button onclick="closeModal()" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/60 hover:bg-black text-white flex items-center justify-center transition" aria-label="Fechar">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+        <div class="absolute bottom-3 left-3 bg-black/70 backdrop-blur text-slate-300 text-[11px] px-3 py-1 rounded-full border border-white/10">
+          <i class="fa-solid fa-camera text-signal mr-1"></i> Imagem meramente ilustrativa
+        </div>
+      </div>
+      <div class="p-6 sm:p-8">
+        <h3 id="modalTitle" class="font-heading font-extrabold text-2xl text-white"></h3>
+        <p id="modalDesc" class="text-slate-300 text-sm sm:text-base mt-3 leading-relaxed"></p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a id="modalWhatsappBtn" href="#" target="_blank" rel="noopener noreferrer" class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 px-6 rounded-xl text-center transition flex items-center justify-center gap-2 shadow-lg">
+            <i class="fa-brands fa-whatsapp text-xl"></i> Solicitar este serviço
+          </a>
+          <button onclick="closeModal()" class="px-6 py-3.5 rounded-xl border border-white/20 hover:bg-white/5 text-slate-300 font-semibold transition">
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script>
-    const PHONE_NUMBER = '5554991377506';
-
+    // Mobile Menu Toggle
     const menuBtn = document.getElementById('mobileMenuBtn');
     const menu = document.getElementById('mobileMenu');
     menuBtn.addEventListener('click', () => {
@@ -276,46 +371,28 @@
       menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
     }));
 
-    document.querySelectorAll('.tab-btn').forEach(button => button.addEventListener('click', () => {
-      const filter = button.dataset.filter;
-      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-      document.querySelectorAll('.service-card').forEach(card => {
-        card.classList.toggle('hidden', filter !== 'todos' && !card.classList.contains(filter));
-      });
-    }));
-
-    document.querySelectorAll('[data-service]').forEach(link => link.addEventListener('click', () => {
-      document.getElementById('serviceType').value = link.dataset.service;
-      updatePreview();
-    }));
-
-    const fieldIds = ['clientName','clientCity','serviceType','urgencyLevel','serviceDetails'];
-    function messageText() {
-      const val = id => document.getElementById(id).value.trim();
-      return `⚡ *SOLICITAÇÃO DE ORÇAMENTO - SITE*\\n\\n` +
-        `👤 *Nome/Empresa:* ${val('clientName') || 'Não informado'}\\n` +
-        `📍 *Localização:* ${val('clientCity') || 'Não informada'}\\n` +
-        `🛠 *Serviço:* ${val('serviceType')}\\n` +
-        `⏱ *Prazo:* ${val('urgencyLevel')}\\n\\n` +
-        `📝 *Descrição:*\\n${val('serviceDetails') || 'Não informada'}\\n\\n` +
-        `_Mensagem enviada pelo site Eletricista Técnico._`;
+    // Modal Functions
+    function openModal(title, imgSrc, desc) {
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalImg').src = imgSrc;
+      document.getElementById('modalDesc').textContent = desc;
+      const whatsappMsg = encodeURIComponent(`Olá! Gostaria de mais informações ou orçamento para o serviço: ${title}.`);
+      document.getElementById('modalWhatsappBtn').href = `https://wa.me/5554991377506?text=${whatsappMsg}`;
+      document.getElementById('serviceModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
     }
-    function updatePreview() {
-      document.getElementById('msgPreview').textContent = messageText();
+
+    function closeModal() {
+      document.getElementById('serviceModal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
     }
-    fieldIds.forEach(id => {
-      document.getElementById(id).addEventListener('input', updatePreview);
-      document.getElementById(id).addEventListener('change', updatePreview);
+
+    // Close modal on background click
+    document.getElementById('serviceModal').addEventListener('click', (e) => {
+      if (e.target.id === 'serviceModal') closeModal();
     });
-    document.getElementById('budgetForm').addEventListener('submit', event => {
-      event.preventDefault();
-      if (!event.currentTarget.reportValidity()) return;
-      const url = `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(messageText())}`;
-      window.open(url, '_blank', 'noopener,noreferrer');
-    });
+
     document.getElementById('year').textContent = new Date().getFullYear();
-    updatePreview();
   </script>
 </body>
 </html>
