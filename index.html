@@ -1,740 +1,321 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ELETRICISTA TÉCNICO | Técnico Eletrotécnico Credenciado</title>
-    
-    <!-- Google tag (gtag.js) - Google Ads -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18316739406"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'AW-18316739406');
-    </script>
-    
-    <!-- Open Graph Meta Tags para Partilha no WhatsApp -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="ELETRICISTA TÉCNICO | Técnico Eletrotécnico Credenciado">
-    <meta property="og:description" content="Soluções Inteligentes: Do Simples ao Complexo. Atendimento técnico residencial, predial, comercial, rural e industrial.">
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- FontAwesome Icons CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts: Montserrat & Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        industrial: {
-                            950: '#070C18',
-                            900: '#0B132B',
-                            800: '#141E36',
-                            700: '#212E4A',
-                            600: '#32446A',
-                        },
-                        amberGlow: '#F59E0B',
-                        copper: '#D97706',
-                        electricBlue: '#0EA5E9',
-                        brightCyan: '#38BDF8',
-                        steel: '#F1F5F9',
-                        steelDark: '#334155'
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        heading: ['Montserrat', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <style>
-        .circuit-bg {
-            background-color: #070C18;
-            background-image: radial-gradient(#141E36 1.2px, transparent 1.2px), radial-gradient(#141E36 1.2px, #070C18 1.2px);
-            background-size: 40px 40px;
-            background-position: 0 0, 20px 20px;
-        }
-        .tech-border {
-            border-left: 4px solid #F59E0B;
-        }
-        .glow-effect:hover {
-            box-shadow: 0 0 25px rgba(14, 165, 233, 0.2);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELETRICISTA TÉCNICO | Serviços Elétricos em Marau e Região</title>
+  <meta name="description" content="Serviços elétricos residenciais, comerciais, rurais e industriais. Instalações, manutenção, automação e diagnóstico técnico em Marau e região.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ELETRICISTA TÉCNICO">
+  <meta property="og:description" content="Soluções elétricas do simples ao complexo. Atendimento residencial, comercial, rural e industrial.">
+  <meta name="theme-color" content="#17191c">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          graphite: { 950:'#111315', 900:'#17191c', 800:'#202327', 700:'#2c3035', 600:'#3b4148' },
+          signal:'#f5b900', signalDark:'#d99f00'
+        },
+        fontFamily: { sans:['Inter','sans-serif'], heading:['Montserrat','sans-serif'] }
+      }}
+    };
+  </script>
+  <style>
+    :root { color-scheme: dark; }
+    body { background:#111315; }
+    .hero-pattern {
+      background-color:#17191c;
+      background-image: radial-gradient(rgba(245,185,0,.10) 1px, transparent 1px);
+      background-size:32px 32px;
+    }
+    .accent-line { border-left:4px solid #f5b900; }
+    .service-card { transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease; }
+    .service-card:hover { transform:translateY(-4px); border-color:#f5b900; box-shadow:0 12px 32px rgba(0,0,0,.22); }
+    .tab-btn.active { background:#f5b900; color:#17191c; border-color:#f5b900; }
+    .focus-yellow:focus { outline:none; border-color:#f5b900; box-shadow:0 0 0 3px rgba(245,185,0,.13); }
+    .illustrative-note { color:#92979d; font-size:11px; }
+  </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-electricBlue selection:text-white">
+<body class="bg-graphite-950 text-slate-100 font-sans antialiased selection:bg-signal selection:text-graphite-950">
 
-    <!-- Top Contact Bar (Limpa e sem repetições) -->
-    <div class="bg-industrial-950 border-b border-slate-800/80 text-xs py-2 px-4 sm:px-8 text-slate-400">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-            <div class="flex items-center gap-2 justify-center sm:justify-start">
-                <span class="text-slate-300 font-medium"><i class="fa-solid fa-clock text-amberGlow mr-1.5"></i> Atendimento programado e emergência</span>
-            </div>
-            <div class="flex items-center gap-3">
-                <a href="#orcamento" class="hover:text-brightCyan transition-colors"><i class="fa-solid fa-calculator mr-1"></i> Simular Orçamento</a>
-            </div>
-        </div>
+  <div class="bg-black/40 border-b border-white/10 text-xs text-slate-400 px-4 py-2">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between gap-2">
+      <span><i class="fa-regular fa-clock text-signal mr-2"></i>Atendimento programado e emergencial mediante disponibilidade</span>
+      <a href="#orcamento" class="hover:text-signal transition"><i class="fa-solid fa-calculator mr-1"></i>Solicitar orçamento</a>
     </div>
+  </div>
 
-    <!-- Main Navigation Header -->
-    <header class="sticky top-0 z-40 bg-industrial-950/95 backdrop-blur-md border-b border-slate-800 shadow-2xl">
-        <div class="max-w-7xl mx-auto px-4 sm:px-8 py-4 flex justify-between items-center">
-            
-            <!-- Logo -->
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-lg bg-industrial-800 border border-slate-700 flex items-center justify-center text-brightCyan text-xl font-bold group-hover:border-brightCyan transition-colors shadow-inner">
-                    <i class="fa-solid fa-microchip"></i>
-                </div>
-                <div>
-                    <span class="font-heading font-extrabold text-lg sm:text-xl tracking-wider text-white block leading-none">
-                        ELETRICISTA TÉCNICO
-                    </span>
-                    <span class="text-[10px] sm:text-xs text-slate-400 font-medium tracking-tight block mt-1 uppercase">
-                        TÉCNICO ELETROTÉCNICO CREDENCIADO
-                    </span>
-                </div>
-            </a>
-
-            <!-- Desktop Menu -->
-            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
-                <a href="#inicio" class="hover:text-brightCyan transition-colors">Início</a>
-                <a href="#servicos" class="hover:text-brightCyan transition-colors">Serviços</a>
-                <a href="#diferenciais" class="hover:text-brightCyan transition-colors">Diferenciais</a>
-                <a href="#bancada" class="hover:text-brightCyan transition-colors">Bancada</a>
-                <a href="#orcamento" class="hover:text-brightCyan transition-colors">Calculadora</a>
-                <a href="#contato" class="hover:text-brightCyan transition-colors">Contato</a>
-            </nav>
-
-            <!-- WhatsApp CTA Button Header -->
-            <div class="hidden sm:flex items-center gap-3">
-                <a href="https://wa.me/5554991377506?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20el%C3%A9trico." 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-semibold py-2.5 px-4 rounded-lg flex items-center gap-2 shadow-lg shadow-emerald-950/50 transition-all hover:scale-105">
-                    <i class="fa-brands fa-whatsapp text-lg"></i>
-                    <span>Chamar no WhatsApp</span>
-                </a>
-            </div>
-
-            <!-- Mobile Menu Toggle Button -->
-            <button id="mobileMenuBtn" aria-label="Abrir Menu" class="lg:hidden text-slate-300 text-2xl p-2 focus:outline-none">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-        </div>
-
-        <!-- Mobile Navigation Menu Dropdown -->
-        <div id="mobileMenu" class="hidden lg:hidden bg-industrial-950 border-b border-slate-800 px-6 py-4 flex flex-col gap-4 text-sm font-medium">
-            <a href="#inicio" class="mobile-link text-slate-200 hover:text-brightCyan">Início</a>
-            <a href="#servicos" class="mobile-link text-slate-200 hover:text-brightCyan">Serviços & Áreas</a>
-            <a href="#diferenciais" class="mobile-link text-slate-200 hover:text-brightCyan">Diferenciais</a>
-            <a href="#bancada" class="mobile-link text-slate-200 hover:text-brightCyan">Equipamentos de Bancada</a>
-            <a href="#orcamento" class="mobile-link text-slate-200 hover:text-brightCyan">Calculadora de Orçamento</a>
-            <a href="#contato" class="mobile-link text-slate-200 hover:text-brightCyan">Contato</a>
-            <a href="https://wa.me/5554991377506?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." 
-               target="_blank" 
-               class="bg-emerald-600 hover:bg-emerald-500 text-white text-center py-3 rounded-lg flex items-center justify-center gap-2 font-semibold">
-                <i class="fa-brands fa-whatsapp"></i> Chamar no WhatsApp
-            </a>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="inicio" class="relative circuit-bg py-16 lg:py-24 overflow-hidden border-b border-slate-800">
-        <div class="max-w-5xl mx-auto px-4 sm:px-8 text-center space-y-6 relative z-10">
-            
-            <!-- Tag Badge Atualizada -->
-            <div class="inline-flex items-center gap-2 bg-industrial-800 border border-slate-700 text-amberGlow text-xs font-semibold px-4 py-1.5 rounded-full shadow-lg">
-                <i class="fa-solid fa-certificate text-amberGlow"></i>
-                <span>Técnico Eletrotécnico Credenciado | CREA-RS</span>
-            </div>
-
-            <!-- Main Title -->
-            <h1 class="font-heading font-black text-3xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-tight">
-                Soluções Inteligentes: <span class="text-transparent bg-clip-text bg-gradient-to-r from-electricBlue to-brightCyan">Do Simples ao Complexo.</span>
-            </h1>
-
-            <!-- Subtitle -->
-            <p class="text-slate-300 text-base sm:text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto">
-                Atendimento técnico completo, abrangendo do <strong class="text-white font-semibold">residencial, predial e comercial ao rural e industrial</strong>. Projetos elétricos, <strong class="text-amberGlow font-semibold">placas solares</strong>, automação avançada e reparos laboratoriais em um só lugar.
-            </p>
-
-            <!-- Action Buttons -->
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                <a href="https://wa.me/5554991377506?text=Ol%C3%A1!%20Preciso%20de%20atendimento%20t%C3%A9cnico%20para%20um%20servi%C3%A7o%20el%C3%A9trico." 
-                   target="_blank" 
-                   class="w-full sm:w-auto bg-amberGlow hover:bg-amber-500 text-slate-950 font-heading font-bold text-sm sm:text-base py-4 px-8 rounded-xl shadow-xl shadow-amber-500/10 flex items-center justify-center gap-3 transition-all hover:scale-105">
-                    <i class="fa-brands fa-whatsapp text-xl"></i>
-                    <span>Solicitar Orçamento Rápido</span>
-                </a>
-
-                <a href="#orcamento" 
-                   class="w-full sm:w-auto bg-industrial-800 hover:bg-industrial-700 text-slate-200 border border-slate-700 text-sm sm:text-base font-semibold py-4 px-8 rounded-xl flex items-center justify-center gap-2 transition-all hover:border-electricBlue">
-                    <i class="fa-solid fa-sliders text-brightCyan"></i>
-                    <span>Simular Serviço</span>
-                </a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="servicos" class="py-16 lg:py-24 bg-industrial-950 border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-8">
-            
-            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
-                <h2 class="text-xs font-bold text-brightCyan tracking-widest uppercase">Áreas de Atuação & Especialidades</h2>
-                <p class="font-heading font-black text-2xl sm:text-3xl lg:text-4xl text-white">
-                    Engenharia & Serviços Elétricos Multi-Setoriais
-                </p>
-                <p class="text-slate-400 text-sm sm:text-base">
-                    Atendimento de ponta a ponta: da manutenção residencial e energia solar até a programação industrial e reparo avançado em bancada.
-                </p>
-            </div>
-
-            <!-- Filter Buttons / Tabs -->
-            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10">
-                <button onclick="filterServices('todos')" id="tab-todos" class="tab-btn active bg-electricBlue text-white font-bold text-xs sm:text-sm py-2.5 px-4 rounded-lg transition-all shadow-md">
-                    Todos os Serviços
-                </button>
-                <button onclick="filterServices('industrial')" id="tab-industrial" class="tab-btn bg-industrial-800 text-slate-300 border border-slate-700 font-bold text-xs sm:text-sm py-2.5 px-4 rounded-lg hover:border-brightCyan transition-all">
-                    <i class="fa-solid fa-industry mr-1 text-sky-400"></i> Industrial & Máquinas
-                </button>
-                <button onclick="filterServices('solar')" id="tab-solar" class="tab-btn bg-industrial-800 text-slate-300 border border-slate-700 font-bold text-xs sm:text-sm py-2.5 px-4 rounded-lg hover:border-brightCyan transition-all">
-                    <i class="fa-solid fa-solar-panel mr-1 text-amberGlow"></i> Energia Solar
-                </button>
-                <button onclick="filterServices('residencial')" id="tab-residencial" class="tab-btn bg-industrial-800 text-slate-300 border border-slate-700 font-bold text-xs sm:text-sm py-2.5 px-4 rounded-lg hover:border-brightCyan transition-all">
-                    <i class="fa-solid fa-house-plug mr-1 text-brightCyan"></i> Residencial, Predial & Comercial
-                </button>
-                <button onclick="filterServices('rural')" id="tab-rural" class="tab-btn bg-industrial-800 text-slate-300 border border-slate-700 font-bold text-xs sm:text-sm py-2.5 px-4 rounded-lg hover:border-brightCyan transition-all">
-                    <i class="fa-solid fa-tractor mr-1 text-emerald-400"></i> Rural & Agrícola
-                </button>
-                <button onclick="filterServices('robotica')" id="tab-robotica" class="tab-btn bg-industrial-800 text-slate-300 border border-slate-700 font-bold text-xs sm:text-sm py-2.5 px-4 rounded-lg hover:border-brightCyan transition-all">
-                    <i class="fa-solid fa-robot mr-1 text-amber-400"></i> Automação & Robótica
-                </button>
-                <button onclick="filterServices('eletronica')" id="tab-eletronica" class="tab-btn bg-industrial-800 text-slate-300 border border-slate-700 font-bold text-xs sm:text-sm py-2.5 px-4 rounded-lg hover:border-brightCyan transition-all">
-                    <i class="fa-solid fa-microchip mr-1 text-purple-400"></i> Placas & Laboratório
-                </button>
-            </div>
-
-            <!-- Services Cards Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="servicesGrid">
-                
-                <!-- Card Industrial: Diagnóstico Avançado, Máquinas & Linha Parada -->
-                <div class="service-card industrial bg-industrial-800 border border-slate-700/80 rounded-xl p-6 hover:border-brightCyan transition-all group glow-effect">
-                    <div class="w-12 h-12 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-gears"></i>
-                    </div>
-                    <span class="text-[10px] font-mono text-sky-400 uppercase tracking-wider block mb-1">Indústria & Linhas de Produção</span>
-                    <h3 class="font-heading font-bold text-lg text-white mb-2">Manutenção Industrial & Diagnóstico Avançado</h3>
-                    <p class="text-slate-300 text-sm mb-4 leading-relaxed">
-                        Solução de falhas elétricas e de programação complexas em máquinas industriais que equipes locais não estão conseguindo resolver.
-                    </p>
-                    <ul class="text-xs text-slate-400 space-y-2.5 border-t border-slate-700/60 pt-4">
-                        <li><i class="fa-solid fa-triangle-exclamation text-amberGlow mr-1.5"></i> <strong>Diagnóstico Específico:</strong> Localização de defeitos em comandos elétricos, sensores e lógica de programação.</li>
-                        <li><i class="fa-solid fa-bolt text-brightCyan mr-1.5"></i> <strong>Restabelecimento de Linha Parada:</strong> Atendimento emergencial de alta prioridade para minimizar downtime.</li>
-                        <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i> <strong>Gestão de Manutenção:</strong> Execução de manutenções Corretiva, Preventiva e Preditiva.</li>
-                        <li><i class="fa-solid fa-sliders text-amberGlow mr-1.5"></i> <strong>Inversores & CLPs:</strong> Parametrização, teste de comunicação e ajuste fino em acionamentos industriais.</li>
-                    </ul>
-                </div>
-
-                <!-- Card Solar: Energia Solar e Placas Fotovoltaicas -->
-                <div class="service-card solar bg-industrial-800 border border-slate-700/80 rounded-xl p-6 hover:border-brightCyan transition-all group glow-effect">
-                    <div class="w-12 h-12 rounded-lg bg-amberGlow/10 border border-amberGlow/30 text-amberGlow flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-solar-panel"></i>
-                    </div>
-                    <span class="text-[10px] font-mono text-amberGlow uppercase tracking-wider block mb-1">Economia & Sustentabilidade</span>
-                    <h3 class="font-heading font-bold text-lg text-white mb-2">Energia Solar & Placas Fotovoltaicas</h3>
-                    <p class="text-slate-300 text-sm mb-4 leading-relaxed">
-                        Dimensionamento, instalação e manutenção de sistemas solares fotovoltaicos On-Grid e Off-Grid para residências, comércios e agronegócio.
-                    </p>
-                    <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-700/60 pt-4">
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Instalação de módulos solares, inversores e microinversores</li>
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Manutenção preventiva, limpeza técnica e inspeção térmica</li>
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Instalação e readequação de Stringbox e proteções CC/CA</li>
-                    </ul>
-                </div>
-
-                <!-- Card Residencial: Reparos & Instalações Residencial, Predial e Comercial -->
-                <div class="service-card residencial bg-industrial-800 border border-slate-700/80 rounded-xl p-6 hover:border-brightCyan transition-all group glow-effect">
-                    <div class="w-12 h-12 rounded-lg bg-electricBlue/10 border border-electricBlue/30 text-brightCyan flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-city"></i>
-                    </div>
-                    <span class="text-[10px] font-mono text-brightCyan uppercase tracking-wider block mb-1">Residencial, Predial & Comercial</span>
-                    <h3 class="font-heading font-bold text-lg text-white mb-2">Instalações e Reparos Elétricos</h3>
-                    <p class="text-slate-300 text-sm mb-4 leading-relaxed">
-                        Manutenção e projetos elétricos para residências, condomínios, prédios e estabelecimentos comerciais com segurança técnica.
-                    </p>
-                    <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-700/60 pt-4">
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Instalação e substituição de chuveiros e iluminação LED</li>
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Troca e dimensionamento de disjuntores, IDR e DPS</li>
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Troca de fiação, tomadas e quadros elétricos</li>
-                    </ul>
-                </div>
-
-                <!-- Card Rural: Elétrica Rural e Agrícola -->
-                <div class="service-card rural bg-industrial-800 border border-slate-700/80 rounded-xl p-6 hover:border-brightCyan transition-all group glow-effect">
-                    <div class="w-12 h-12 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-tractor"></i>
-                    </div>
-                    <span class="text-[10px] font-mono text-emerald-400 uppercase tracking-wider block mb-1">Setor Agrobusiness</span>
-                    <h3 class="font-heading font-bold text-lg text-white mb-2">Elétrica Rural & Agrícola</h3>
-                    <p class="text-slate-300 text-sm mb-4 leading-relaxed">
-                        Suporte técnico focado em propriedades rurais, sistemas de irrigação, automação de galpões e máquinas agrícolas.
-                    </p>
-                    <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-700/60 pt-4">
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Painéis de acionamento para bombas de poço e irrigação</li>
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Manutenção em módulos eletrônicos de máquinas rurais</li>
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Proteção contra surtos e oscilações de tensão no campo</li>
-                    </ul>
-                </div>
-
-                <!-- Card Robotica: Automação, Programação e Robótica Industrial -->
-                <div class="service-card robotica bg-industrial-800 border border-slate-700/80 rounded-xl p-6 hover:border-brightCyan transition-all group glow-effect">
-                    <div class="w-12 h-12 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-robot"></i>
-                    </div>
-                    <span class="text-[10px] font-mono text-amber-400 uppercase tracking-wider block mb-1">Industrial & Alta Tecnologia</span>
-                    <h3 class="font-heading font-bold text-lg text-white mb-2">Automação, Programação & Robótica</h3>
-                    <p class="text-slate-300 text-sm mb-4 leading-relaxed">
-                        Programação avançada e parametrização de controladores (CLPs), IHMs e braços robóticos industriais.
-                    </p>
-                    <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-700/60 pt-4">
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Programação de CLPs, IHMs e Robôs Industriais (ABB / RAPID)</li>
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Parametrização de Inversores e Servo-drives</li>
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Diagnóstico de comunicação e redes industriais</li>
-                    </ul>
-                </div>
-
-                <!-- Card Eletronica: Reparo de Placas Eletrônicas e Inversores -->
-                <div class="service-card eletronica bg-industrial-800 border border-slate-700/80 rounded-xl p-6 hover:border-brightCyan transition-all group glow-effect">
-                    <div class="w-12 h-12 rounded-lg bg-purple-500/10 border border-purple-500/30 text-purple-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-microchip"></i>
-                    </div>
-                    <span class="text-[10px] font-mono text-purple-400 uppercase tracking-wider block mb-1">Laboratório de Bancada</span>
-                    <h3 class="font-heading font-bold text-lg text-white mb-2">Reparo Laboratorial de Placas & Inversores</h3>
-                    <p class="text-slate-300 text-sm mb-4 leading-relaxed">
-                        Diagnóstico minucioso em nível de componentes para inversores de frequência, inversores solares e controladores.
-                    </p>
-                    <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-700/60 pt-4">
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Reparação de Inversores Solares e Soft-Starters</li>
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Substituição de componentes SMD/PTH e soldas de precisão</li>
-                        <li><i class="fa-solid fa-check text-amberGlow mr-1.5"></i> Análise de sinal com osciloscópio e fontes de bancada</li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Differentials Section -->
-    <section id="diferenciais" class="py-16 lg:py-20 bg-industrial-900 border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                
-                <div class="bg-slate-900/90 border border-slate-800 p-6 rounded-xl tech-border space-y-3">
-                    <div class="text-amberGlow text-3xl mb-2">
-                        <i class="fa-solid fa-certificate"></i>
-                    </div>
-                    <h3 class="font-heading font-bold text-lg text-white">Técnico Eletrotécnico Credenciado</h3>
-                    <p class="text-slate-300 text-sm leading-relaxed">
-                        Profissional qualificado e registrado no CREA-RS, garantindo execução técnica com conformidade integral às normas ABNT e NR.
-                    </p>
-                </div>
-
-                <div class="bg-slate-900/90 border border-slate-800 p-6 rounded-xl border-l-4 border-l-electricBlue space-y-3">
-                    <div class="text-brightCyan text-3xl mb-2">
-                        <i class="fa-solid fa-solar-panel"></i>
-                    </div>
-                    <h3 class="font-heading font-bold text-lg text-white">Energia Solar & Alta Tecnologia</h3>
-                    <p class="text-slate-300 text-sm leading-relaxed">
-                        Expertise completa em instalação de painéis solares, manutenção de inversores, automação, robótica e eletrônica.
-                    </p>
-                </div>
-
-                <div class="bg-slate-900/90 border border-slate-800 p-6 rounded-xl border-l-4 border-l-emerald-500 space-y-3">
-                    <div class="text-emerald-400 text-3xl mb-2">
-                        <i class="fa-solid fa-clock-check"></i>
-                    </div>
-                    <h3 class="font-heading font-bold text-lg text-white">Pontualidade & Agilidade</h3>
-                    <p class="text-slate-300 text-sm leading-relaxed">
-                        Compromisso rigoroso com prazos de atendimento programado e suporte técnico eficiente para urgências elétricas.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Secção Selos de Conformidade e Normas de Segurança -->
-    <div class="bg-industrial-950 py-10 border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-8">
-            <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-center text-slate-300 text-xs sm:text-sm font-semibold uppercase tracking-wider">
-                
-                <div class="flex items-center gap-2.5 bg-industrial-800/80 border border-slate-700/60 px-4 py-3 rounded-xl shadow-md">
-                    <i class="fa-solid fa-shield-halved text-amberGlow text-xl"></i>
-                    <span>Norma NR-10 (Segurança Elétrica)</span>
-                </div>
-
-                <div class="flex items-center gap-2.5 bg-industrial-800/80 border border-slate-700/60 px-4 py-3 rounded-xl shadow-md">
-                    <i class="fa-solid fa-person-digging text-brightCyan text-xl"></i>
-                    <span>Norma NR-35 (Trabalho em Altura)</span>
-                </div>
-
-                <div class="flex items-center gap-2.5 bg-industrial-800/80 border border-slate-700/60 px-4 py-3 rounded-xl shadow-md">
-                    <i class="fa-solid fa-file-contract text-emerald-400 text-xl"></i>
-                    <span>Emissão de ART / CREA-RS</span>
-                </div>
-
-                <div class="flex items-center gap-2.5 bg-industrial-800/80 border border-slate-700/60 px-4 py-3 rounded-xl shadow-md">
-                    <i class="fa-solid fa-solar-panel text-amber-400 text-xl"></i>
-                    <span>Homologação Fotovoltaica</span>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- Interactive Workbench Visual Showcase -->
-    <section id="bancada" class="py-16 lg:py-24 bg-industrial-950 border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
-                <span class="text-xs font-bold text-brightCyan tracking-widest uppercase">Estrutura Laboratorial</span>
-                <h2 class="font-heading font-black text-2xl sm:text-3xl text-white">
-                    Equipamentos e Diagnóstico Técnico
-                </h2>
-                <p class="text-slate-400 text-sm">
-                    Ambiente de bancada equipado para testes precisos em inversores solares, placas e componentes industriais.
-                </p>
-            </div>
-
-            <!-- Workbench Interactive Display Cards -->
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-                
-                <div class="bg-industrial-800 border border-slate-700/80 p-4 rounded-xl text-center space-y-2 hover:border-brightCyan transition-colors">
-                    <div class="w-10 h-10 mx-auto rounded-full bg-amberGlow/10 text-amberGlow flex items-center justify-center text-lg">
-                        <i class="fa-solid fa-solar-panel"></i>
-                    </div>
-                    <h4 class="font-bold text-xs text-white">Inversores Solares</h4>
-                    <p class="text-[11px] text-slate-400">Testes On/Off-Grid</p>
-                </div>
-
-                <div class="bg-industrial-800 border border-slate-700/80 p-4 rounded-xl text-center space-y-2 hover:border-brightCyan transition-colors">
-                    <div class="w-10 h-10 mx-auto rounded-full bg-electricBlue/10 text-brightCyan flex items-center justify-center text-lg">
-                        <i class="fa-solid fa-gauge-high"></i>
-                    </div>
-                    <h4 class="font-bold text-xs text-white">Multímetro Digital</h4>
-                    <p class="text-[11px] text-slate-400">Medições de precisão</p>
-                </div>
-
-                <div class="bg-industrial-800 border border-slate-700/80 p-4 rounded-xl text-center space-y-2 hover:border-brightCyan transition-colors">
-                    <div class="w-10 h-10 mx-auto rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg">
-                        <i class="fa-solid fa-square-poll-vertical"></i>
-                    </div>
-                    <h4 class="font-bold text-xs text-white">Painel QDC & Stringbox</h4>
-                    <p class="text-[11px] text-slate-400">Disjuntores & DPS</p>
-                </div>
-
-                <div class="bg-industrial-800 border border-slate-700/80 p-4 rounded-xl text-center space-y-2 hover:border-brightCyan transition-colors">
-                    <div class="w-10 h-10 mx-auto rounded-full bg-purple-500/10 text-purple-400 flex items-center justify-center text-lg">
-                        <i class="fa-solid fa-microchip"></i>
-                    </div>
-                    <h4 class="font-bold text-xs text-white">Placas Eletrônicas</h4>
-                    <p class="text-[11px] text-slate-400">Componentes & SMD</p>
-                </div>
-
-                <div class="bg-industrial-800 border border-slate-700/80 p-4 rounded-xl text-center space-y-2 hover:border-brightCyan transition-colors">
-                    <div class="w-10 h-10 mx-auto rounded-full bg-amber-500/10 text-amber-500 flex items-center justify-center text-lg">
-                        <i class="fa-solid fa-robot"></i>
-                    </div>
-                    <h4 class="font-bold text-xs text-white">CLPs, Robôs & IHMs</h4>
-                    <p class="text-[11px] text-slate-400">Testes em Bancada</p>
-                </div>
-
-                <div class="bg-industrial-800 border border-slate-700/80 p-4 rounded-xl text-center space-y-2 hover:border-brightCyan transition-colors">
-                    <div class="w-10 h-10 mx-auto rounded-full bg-sky-500/10 text-sky-400 flex items-center justify-center text-lg">
-                        <i class="fa-solid fa-plug"></i>
-                    </div>
-                    <h4 class="font-bold text-xs text-white">Fontes de Bancada</h4>
-                    <p class="text-[11px] text-slate-400">Alimentação Segura</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Interactive WhatsApp Budget Calculator Section -->
-    <section id="orcamento" class="py-16 lg:py-24 circuit-bg border-b border-slate-800">
-        <div class="max-w-4xl mx-auto px-4 sm:px-8">
-            
-            <div class="text-center space-y-4 mb-10">
-                <span class="inline-block bg-electricBlue/10 text-brightCyan border border-electricBlue/30 text-xs font-semibold px-3 py-1 rounded-full">
-                    <i class="fa-solid fa-calculator mr-1"></i> Simulador Rápido
-                </span>
-                <h2 class="font-heading font-black text-2xl sm:text-3xl lg:text-4xl text-white">
-                    Monte seu Pedido e Envie no WhatsApp
-                </h2>
-                <p class="text-slate-300 text-sm sm:text-base">
-                    Preencha os campos abaixo para gerar uma mensagem formatada e solicitar seu orçamento em segundos.
-                </p>
-            </div>
-
-            <!-- Calculator Form Container -->
-            <div class="bg-industrial-800/95 border border-slate-700/80 rounded-2xl p-6 sm:p-8 shadow-2xl space-y-6">
-                
-                <form id="budgetForm" onsubmit="event.preventDefault(); generateWhatsAppLink();" class="space-y-6">
-                    
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        
-                        <!-- Customer Name -->
-                        <div class="space-y-2">
-                            <label for="clientName" class="block text-xs font-bold text-slate-300 uppercase tracking-wider">Seu Nome / Empresa *</label>
-                            <input type="text" id="clientName" required placeholder="Ex: João Silva ou Fazenda Santa Clara" 
-                                   class="w-full bg-industrial-950 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-brightCyan">
-                        </div>
-
-                        <!-- Location / City -->
-                        <div class="space-y-2">
-                            <label for="clientCity" class="block text-xs font-bold text-slate-300 uppercase tracking-wider">Sua Localização / Bairro *</label>
-                            <input type="text" id="clientCity" required placeholder="Ex: Marau RS" 
-                                   class="w-full bg-industrial-950 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-brightCyan">
-                        </div>
-
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        
-                        <!-- Service Area Dropdown -->
-                        <div class="space-y-2">
-                            <label for="serviceType" class="block text-xs font-bold text-slate-300 uppercase tracking-wider">Setor / Tipo de Serviço *</label>
-                            <select id="serviceType" class="w-full bg-industrial-950 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-brightCyan">
-                                <option value="Manutenção Industrial, Diagnóstico e Linha Parada">Manutenção Industrial, Diagnóstico e Linha Parada</option>
-                                <option value="Energia Solar / Placas Fotovoltaicas">Energia Solar / Placas Fotovoltaicas (On-Grid / Off-Grid)</option>
-                                <option value="Residencial, Predial e Comercial">Residencial, Predial e Comercial (Chuveiros, Fiação, QDC)</option>
-                                <option value="Elétrica Rural e Agrícola">Elétrica Rural & Agrícola (Bombas, Irrigação, Máquinas)</option>
-                                <option value="Automação, Programação e Robótica Industrial">Automação, Programação e Robótica Industrial</option>
-                                <option value="Reparo Laboratorial de Placas & Inversores Solares">Reparo Laboratorial de Placas & Inversores Solares</option>
-                                <option value="Automação de Casa Inteligente (Smart Home)">Automação de Casa Inteligente (Smart Home)</option>
-                            </select>
-                        </div>
-
-                        <!-- Urgency Level Dropdown -->
-                        <div class="space-y-2">
-                            <label for="urgencyLevel" class="block text-xs font-bold text-slate-300 uppercase tracking-wider">Nível de Urgência *</label>
-                            <select id="urgencyLevel" class="w-full bg-industrial-950 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-brightCyan">
-                                <option value="Orçamento Normal (Atendimento Programado)">📅 Orçamento Normal (Atendimento programado)</option>
-                                <option value="Emergência / Linha Parada">⚡ Emergência / Linha Parada</option>
-                                <option value="Análise Técnica / Projeto">🔍 Análise Técnica / Projeto</option>
-                            </select>
-                        </div>
-
-                    </div>
-
-                    <!-- Problem Description -->
-                    <div class="space-y-2">
-                        <label for="serviceDetails" class="block text-xs font-bold text-slate-300 uppercase tracking-wider">Descrição do Serviço ou Problema *</label>
-                        <textarea id="serviceDetails" rows="3" required placeholder="Descreva o que precisa (ex: máquina parada com falha elétrica/programação não identificada, restabelecimento urgente, manutenção preventiva/preditiva...)" 
-                                  class="w-full bg-industrial-950 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-brightCyan"></textarea>
-                    </div>
-
-                    <!-- Live Message Preview Box -->
-                    <div class="bg-industrial-950 border border-slate-800 p-4 rounded-xl space-y-2">
-                        <div class="flex justify-between items-center text-xs text-slate-400">
-                            <span><i class="fa-solid fa-eye text-brightCyan mr-1"></i> Prévia da mensagem que será enviada:</span>
-                            <span class="text-[10px] bg-industrial-800 px-2 py-0.5 rounded text-amberGlow font-mono">WhatsApp</span>
-                        </div>
-                        <p id="msgPreview" class="text-xs font-mono text-slate-300 bg-black/40 p-3 rounded border border-slate-800 leading-relaxed whitespace-pre-line">
-                            Preencha os campos acima para ver a prévia aqui...
-                        </p>
-                    </div>
-
-                    <!-- Submit Button -->
-                    <button type="submit" 
-                            class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-heading font-bold text-base py-4 rounded-xl shadow-xl shadow-emerald-950/50 flex items-center justify-center gap-3 transition-all hover:scale-[1.01]">
-                        <i class="fa-brands fa-whatsapp text-2xl"></i>
-                        <span>Enviar Mensagem Pronta no WhatsApp</span>
-                    </button>
-
-                </form>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contato" class="py-16 lg:py-24 bg-industrial-950 border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-8">
-            <div class="max-w-3xl mx-auto text-center space-y-6">
-                <div>
-                    <span class="text-xs font-bold text-brightCyan tracking-widest uppercase block mb-1">Contato Direto</span>
-                    <h2 class="font-heading font-black text-2xl sm:text-3xl text-white">
-                        Fale com o Eletricista Técnico
-                    </h2>
-                    <p class="text-slate-300 text-sm mt-2">
-                        Entre em contato diretamente para tirar dúvidas sobre energia solar, manutenção industrial ou solicitar um orçamento.
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left pt-4">
-                    <div class="flex items-start gap-4 p-5 rounded-xl bg-industrial-800 border border-slate-700/80">
-                        <div class="w-11 h-11 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl flex-shrink-0">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-sm text-white">WhatsApp Direto</h4>
-                            <p class="text-xs text-slate-300 mt-0.5">Atendimento e Orçamentos</p>
-                            <a href="https://wa.me/5554991377506" target="_blank" class="text-xs text-emerald-400 font-bold hover:underline inline-block mt-1">
-                                Iniciar conversa &rarr;
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start gap-4 p-5 rounded-xl bg-industrial-800 border border-slate-700/80">
-                        <div class="w-11 h-11 rounded-lg bg-electricBlue/10 text-brightCyan flex items-center justify-center text-xl flex-shrink-0">
-                            <i class="fa-solid fa-clock"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-sm text-white">Horários</h4>
-                            <p class="text-xs text-slate-300 mt-0.5">Atendimento Programado</p>
-                            <p class="text-[11px] text-amberGlow mt-1"><i class="fa-solid fa-bolt"></i> Suporte para emergências elétricas e linha parada</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-black py-10 border-t border-slate-800 text-xs text-slate-500">
-        <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col sm:flex-row justify-between items-center gap-6">
-            
-            <div class="flex items-center gap-3">
-                <div class="w-8 h-8 rounded bg-industrial-800 border border-slate-700 text-brightCyan flex items-center justify-center font-bold">
-                    <i class="fa-solid fa-microchip"></i>
-                </div>
-                <div>
-                    <span class="font-heading font-bold text-slate-200 block text-sm">ELETRICISTA TÉCNICO</span>
-                    <span class="text-[11px] text-slate-400 uppercase">TÉCNICO ELETROTÉCNICO CREDENCIADO</span>
-                </div>
-            </div>
-
-            <div class="text-center sm:text-right space-y-1">
-                <p>&copy; ELETRICISTA TÉCNICO. Todos os direitos reservados.</p>
-            </div>
-
-        </div>
-    </footer>
-
-    <!-- Botão Flutuante do WhatsApp -->
-    <a href="https://wa.me/5554991377506?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." 
-       target="_blank" 
-       rel="noopener noreferrer"
-       aria-label="Contactar pelo WhatsApp"
-       class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-400 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-slate-900 group">
-        <i class="fa-brands fa-whatsapp text-3xl"></i>
-        <span class="absolute right-16 bg-slate-900 text-white text-xs px-3 py-1.5 rounded-lg border border-slate-700 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg pointer-events-none">
-            Fale no WhatsApp
+  <header class="sticky top-0 z-50 bg-graphite-950/95 backdrop-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
+      <a href="#inicio" class="flex items-center gap-3 min-w-0">
+        <span class="w-11 h-11 rounded-xl bg-signal text-graphite-950 flex items-center justify-center text-xl shadow-lg"><i class="fa-solid fa-bolt"></i></span>
+        <span class="min-w-0">
+          <strong class="font-heading font-extrabold tracking-wide text-white block text-base sm:text-lg leading-tight">ELETRICISTA TÉCNICO</strong>
+          <small class="text-[10px] sm:text-xs text-slate-400 tracking-wider">SOLUÇÕES ELÉTRICAS</small>
         </span>
-    </a>
+      </a>
+      <nav class="hidden lg:flex items-center gap-6 text-sm text-slate-300">
+        <a class="hover:text-signal" href="#inicio">Início</a>
+        <a class="hover:text-signal" href="#servicos">Serviços</a>
+        <a class="hover:text-signal" href="#diferenciais">Diferenciais</a>
+        <a class="hover:text-signal" href="#bancada">Bancada</a>
+        <a class="hover:text-signal" href="#contato">Contato</a>
+      </nav>
+      <a href="https://wa.me/5554991377506?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm px-4 py-3 rounded-lg items-center gap-2 transition">
+        <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp
+      </a>
+      <button id="mobileMenuBtn" class="lg:hidden text-2xl p-2 text-slate-200" aria-label="Abrir menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    </div>
+    <nav id="mobileMenu" class="hidden lg:hidden border-t border-white/10 bg-graphite-900 px-5 py-5 flex-col gap-4 text-sm">
+      <a class="mobile-link" href="#inicio">Início</a><a class="mobile-link" href="#servicos">Serviços</a>
+      <a class="mobile-link" href="#diferenciais">Diferenciais</a><a class="mobile-link" href="#bancada">Bancada</a>
+      <a class="mobile-link" href="#orcamento">Orçamento</a><a class="mobile-link" href="#contato">Contato</a>
+      <a href="https://wa.me/5554991377506" target="_blank" rel="noopener noreferrer" class="bg-emerald-600 text-white rounded-lg p-3 text-center font-semibold"><i class="fa-brands fa-whatsapp mr-2"></i>Chamar no WhatsApp</a>
+    </nav>
+  </header>
 
-    <!-- Inline JavaScript -->
-    <script>
-        const PHONE_NUMBER = '5554991377506';
+  <main>
+    <section id="inicio" class="hero-pattern border-b border-white/10 py-20 lg:py-28">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+        <span class="inline-flex items-center gap-2 border border-signal/40 bg-signal/10 text-signal rounded-full px-4 py-2 text-xs sm:text-sm font-semibold mb-7">
+          <i class="fa-solid fa-bolt"></i> Atendimento técnico em Marau e região
+        </span>
+        <h1 class="font-heading font-black text-4xl sm:text-5xl lg:text-6xl leading-tight tracking-tight">
+          Soluções elétricas<br><span class="text-signal">do simples ao complexo.</span>
+        </h1>
+        <p class="max-w-3xl mx-auto mt-6 text-slate-300 text-base sm:text-lg leading-relaxed">
+          Serviços e manutenção elétrica para <strong class="text-white">residências, comércios, propriedades rurais e indústrias</strong>. Instalações, diagnóstico de falhas, automação e soluções técnicas.
+        </p>
+        <div class="mt-9 flex flex-col sm:flex-row justify-center gap-3">
+          <a href="https://wa.me/5554991377506?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="bg-signal hover:bg-yellow-400 text-graphite-950 font-bold rounded-xl px-7 py-4 transition"><i class="fa-brands fa-whatsapp mr-2"></i>Solicitar orçamento</a>
+          <a href="#servicos" class="border border-white/20 hover:border-signal text-white font-semibold rounded-xl px-7 py-4 transition"><i class="fa-solid fa-arrow-down mr-2 text-signal"></i>Conhecer serviços</a>
+        </div>
+        <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl mx-auto text-sm">
+          <div class="bg-black/25 border border-white/10 rounded-lg p-3"><i class="fa-solid fa-house text-signal block text-xl mb-2"></i>Residencial</div>
+          <div class="bg-black/25 border border-white/10 rounded-lg p-3"><i class="fa-solid fa-store text-signal block text-xl mb-2"></i>Comercial</div>
+          <div class="bg-black/25 border border-white/10 rounded-lg p-3"><i class="fa-solid fa-tractor text-signal block text-xl mb-2"></i>Rural</div>
+          <div class="bg-black/25 border border-white/10 rounded-lg p-3"><i class="fa-solid fa-industry text-signal block text-xl mb-2"></i>Industrial</div>
+        </div>
+      </div>
+    </section>
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const mobileBtn = document.getElementById('mobileMenuBtn');
-            const mobileMenu = document.getElementById('mobileMenu');
-            const mobileLinks = document.querySelectorAll('.mobile-link');
+    <section id="servicos" class="py-16 lg:py-24 bg-graphite-950 border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="max-w-3xl mx-auto text-center mb-10">
+          <p class="text-signal uppercase tracking-[.2em] text-xs font-bold">O que eu faço</p>
+          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl mt-3">Serviços e áreas de atuação</h2>
+          <p class="text-slate-400 mt-4">Atendimento técnico para diferentes necessidades, do reparo residencial à manutenção de sistemas industriais.</p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-2 mb-8">
+          <button class="tab-btn active border border-white/15 rounded-lg px-4 py-2 text-xs sm:text-sm font-semibold" data-filter="todos">Todos</button>
+          <button class="tab-btn border border-white/15 rounded-lg px-4 py-2 text-xs sm:text-sm font-semibold" data-filter="residencial">Residencial e comercial</button>
+          <button class="tab-btn border border-white/15 rounded-lg px-4 py-2 text-xs sm:text-sm font-semibold" data-filter="industrial">Industrial</button>
+          <button class="tab-btn border border-white/15 rounded-lg px-4 py-2 text-xs sm:text-sm font-semibold" data-filter="solar">Energia solar</button>
+          <button class="tab-btn border border-white/15 rounded-lg px-4 py-2 text-xs sm:text-sm font-semibold" data-filter="rural">Rural</button>
+          <button class="tab-btn border border-white/15 rounded-lg px-4 py-2 text-xs sm:text-sm font-semibold" data-filter="automacao">Automação</button>
+          <button class="tab-btn border border-white/15 rounded-lg px-4 py-2 text-xs sm:text-sm font-semibold" data-filter="eletronica">Eletrônica</button>
+        </div>
+        <div id="servicesGrid" class="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
+          <article class="service-card residencial bg-graphite-800 border border-white/10 rounded-xl p-6">
+            <div class="w-12 h-12 rounded-lg bg-signal/10 text-signal flex items-center justify-center text-2xl mb-4"><i class="fa-solid fa-house-chimney"></i></div>
+            <p class="text-signal text-xs uppercase tracking-widest font-bold">Residencial, predial e comercial</p>
+            <h3 class="font-heading font-bold text-xl mt-2">Instalações e reparos elétricos</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mt-3">Manutenção e adequações elétricas em casas, apartamentos, condomínios e estabelecimentos comerciais.</p>
+            <ul class="text-sm text-slate-300 mt-4 space-y-2"><li><i class="fa-solid fa-check text-signal mr-2"></i>Tomadas, interruptores e iluminação</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Chuveiros e circuitos dedicados</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Quadros, disjuntores, IDR e DPS</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Identificação de falhas e curto-circuitos</li></ul>
+            <a class="inline-block mt-5 text-signal text-sm font-bold hover:underline" href="#orcamento" data-service="Instalações e reparos elétricos">Solicitar atendimento <i class="fa-solid fa-arrow-right ml-1"></i></a>
+          </article>
+          <article class="service-card industrial bg-graphite-800 border border-white/10 rounded-xl p-6">
+            <div class="w-12 h-12 rounded-lg bg-signal/10 text-signal flex items-center justify-center text-2xl mb-4"><i class="fa-solid fa-gears"></i></div>
+            <p class="text-signal text-xs uppercase tracking-widest font-bold">Indústria e máquinas</p>
+            <h3 class="font-heading font-bold text-xl mt-2">Manutenção industrial</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mt-3">Diagnóstico de falhas elétricas, manutenção de máquinas e suporte para reduzir paradas de produção.</p>
+            <ul class="text-sm text-slate-300 mt-4 space-y-2"><li><i class="fa-solid fa-check text-signal mr-2"></i>Comandos elétricos e painéis</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Sensores e dispositivos de campo</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Inversores de frequência</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Manutenção corretiva e preventiva</li></ul>
+            <a class="inline-block mt-5 text-signal text-sm font-bold hover:underline" href="#orcamento" data-service="Manutenção industrial">Solicitar atendimento <i class="fa-solid fa-arrow-right ml-1"></i></a>
+          </article>
+          <article class="service-card solar bg-graphite-800 border border-white/10 rounded-xl p-6">
+            <div class="w-12 h-12 rounded-lg bg-signal/10 text-signal flex items-center justify-center text-2xl mb-4"><i class="fa-solid fa-solar-panel"></i></div>
+            <p class="text-signal text-xs uppercase tracking-widest font-bold">Energia e sustentabilidade</p>
+            <h3 class="font-heading font-bold text-xl mt-2">Sistemas fotovoltaicos</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mt-3">Serviços relacionados a sistemas de energia solar, conforme escopo técnico e habilitações aplicáveis.</p>
+            <ul class="text-sm text-slate-300 mt-4 space-y-2"><li><i class="fa-solid fa-check text-signal mr-2"></i>Inspeção e diagnóstico</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Manutenção de componentes</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Proteções elétricas CC/CA</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Avaliação de falhas e desempenho</li></ul>
+            <a class="inline-block mt-5 text-signal text-sm font-bold hover:underline" href="#orcamento" data-service="Serviço em sistema fotovoltaico">Solicitar atendimento <i class="fa-solid fa-arrow-right ml-1"></i></a>
+          </article>
+          <article class="service-card rural bg-graphite-800 border border-white/10 rounded-xl p-6">
+            <div class="w-12 h-12 rounded-lg bg-signal/10 text-signal flex items-center justify-center text-2xl mb-4"><i class="fa-solid fa-tractor"></i></div>
+            <p class="text-signal text-xs uppercase tracking-widest font-bold">Propriedades rurais</p>
+            <h3 class="font-heading font-bold text-xl mt-2">Elétrica rural e agrícola</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mt-3">Soluções elétricas para propriedades rurais, instalações, motores, bombas e equipamentos agrícolas.</p>
+            <ul class="text-sm text-slate-300 mt-4 space-y-2"><li><i class="fa-solid fa-check text-signal mr-2"></i>Bombas e sistemas de irrigação</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Acionamento de motores</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Quadros e proteções</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Diagnóstico de problemas elétricos</li></ul>
+            <a class="inline-block mt-5 text-signal text-sm font-bold hover:underline" href="#orcamento" data-service="Elétrica rural e agrícola">Solicitar atendimento <i class="fa-solid fa-arrow-right ml-1"></i></a>
+          </article>
+          <article class="service-card automacao bg-graphite-800 border border-white/10 rounded-xl p-6">
+            <div class="w-12 h-12 rounded-lg bg-signal/10 text-signal flex items-center justify-center text-2xl mb-4"><i class="fa-solid fa-microchip"></i></div>
+            <p class="text-signal text-xs uppercase tracking-widest font-bold">Controle e automação</p>
+            <h3 class="font-heading font-bold text-xl mt-2">Automação e acionamentos</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mt-3">Análise e suporte em sistemas de controle e acionamento, conforme equipamento e projeto.</p>
+            <ul class="text-sm text-slate-300 mt-4 space-y-2"><li><i class="fa-solid fa-check text-signal mr-2"></i>CLPs e IHMs</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Inversores e soft-starters</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Comandos e lógica de controle</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Diagnóstico de comunicação</li></ul>
+            <a class="inline-block mt-5 text-signal text-sm font-bold hover:underline" href="#orcamento" data-service="Automação e acionamentos">Solicitar atendimento <i class="fa-solid fa-arrow-right ml-1"></i></a>
+          </article>
+          <article class="service-card eletronica bg-graphite-800 border border-white/10 rounded-xl p-6">
+            <div class="w-12 h-12 rounded-lg bg-signal/10 text-signal flex items-center justify-center text-2xl mb-4"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+            <p class="text-signal text-xs uppercase tracking-widest font-bold">Diagnóstico técnico</p>
+            <h3 class="font-heading font-bold text-xl mt-2">Eletrônica e reparos em bancada</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mt-3">Avaliação de equipamentos e placas eletrônicas. O reparo depende de análise prévia e disponibilidade de componentes.</p>
+            <ul class="text-sm text-slate-300 mt-4 space-y-2"><li><i class="fa-solid fa-check text-signal mr-2"></i>Fontes e placas eletrônicas</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Carregadores e módulos</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Diagnóstico de componentes</li><li><i class="fa-solid fa-check text-signal mr-2"></i>Avaliação de viabilidade do conserto</li></ul>
+            <a class="inline-block mt-5 text-signal text-sm font-bold hover:underline" href="#orcamento" data-service="Diagnóstico eletrônico em bancada">Solicitar avaliação <i class="fa-solid fa-arrow-right ml-1"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
 
-            if (mobileBtn && mobileMenu) {
-                mobileBtn.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                });
+    <section id="diferenciais" class="py-16 bg-graphite-900 border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-10"><p class="text-signal text-xs uppercase tracking-[.2em] font-bold">Por que contratar</p><h2 class="font-heading text-3xl font-extrabold mt-3">Atendimento técnico com responsabilidade</h2></div>
+        <div class="grid md:grid-cols-3 gap-5">
+          <div class="accent-line bg-graphite-800 rounded-xl p-6"><i class="fa-solid fa-clipboard-check text-signal text-3xl"></i><h3 class="font-heading font-bold text-lg mt-4">Diagnóstico antes da solução</h3><p class="text-slate-400 text-sm mt-2 leading-relaxed">Avaliação do problema e explicação do serviço recomendado antes da execução.</p></div>
+          <div class="accent-line bg-graphite-800 rounded-xl p-6"><i class="fa-solid fa-house-circle-check text-signal text-3xl"></i><h3 class="font-heading font-bold text-lg mt-4">Residencial e industrial</h3><p class="text-slate-400 text-sm mt-2 leading-relaxed">Atendimento para demandas de pequeno porte e necessidades técnicas mais específicas.</p></div>
+          <div class="accent-line bg-graphite-800 rounded-xl p-6"><i class="fa-solid fa-comments text-signal text-3xl"></i><h3 class="font-heading font-bold text-lg mt-4">Contato direto</h3><p class="text-slate-400 text-sm mt-2 leading-relaxed">Converse diretamente pelo WhatsApp para explicar o serviço e combinar uma avaliação.</p></div>
+        </div>
+      </div>
+    </section>
 
-                mobileLinks.forEach(link => {
-                    link.addEventListener('click', () => {
-                        mobileMenu.classList.add('hidden');
-                    });
-                });
-            }
+    <section id="bancada" class="py-16 bg-graphite-950 border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto mb-9"><p class="text-signal text-xs uppercase tracking-[.2em] font-bold">Área técnica</p><h2 class="font-heading text-3xl font-extrabold mt-3">Diagnóstico e equipamentos</h2><p class="text-slate-400 mt-3 text-sm">A estrutura e os recursos utilizados variam conforme o tipo de equipamento e serviço solicitado.</p></div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+          <div class="bg-graphite-800 border border-white/10 rounded-xl p-4 text-center"><i class="fa-solid fa-gauge-high text-signal text-2xl"></i><p class="font-semibold text-sm mt-3">Multímetro</p><p class="text-xs text-slate-500 mt-1">Medições elétricas</p></div>
+          <div class="bg-graphite-800 border border-white/10 rounded-xl p-4 text-center"><i class="fa-solid fa-wave-square text-signal text-2xl"></i><p class="font-semibold text-sm mt-3">Osciloscópio</p><p class="text-xs text-slate-500 mt-1">Análise de sinais</p></div>
+          <div class="bg-graphite-800 border border-white/10 rounded-xl p-4 text-center"><i class="fa-solid fa-plug text-signal text-2xl"></i><p class="font-semibold text-sm mt-3">Fontes</p><p class="text-xs text-slate-500 mt-1">Testes controlados</p></div>
+          <div class="bg-graphite-800 border border-white/10 rounded-xl p-4 text-center"><i class="fa-solid fa-microchip text-signal text-2xl"></i><p class="font-semibold text-sm mt-3">Placas</p><p class="text-xs text-slate-500 mt-1">Análise eletrônica</p></div>
+          <div class="bg-graphite-800 border border-white/10 rounded-xl p-4 text-center"><i class="fa-solid fa-gears text-signal text-2xl"></i><p class="font-semibold text-sm mt-3">Acionamentos</p><p class="text-xs text-slate-500 mt-1">Inversores e motores</p></div>
+          <div class="bg-graphite-800 border border-white/10 rounded-xl p-4 text-center"><i class="fa-solid fa-code text-signal text-2xl"></i><p class="font-semibold text-sm mt-3">Automação</p><p class="text-xs text-slate-500 mt-1">CLPs e IHMs</p></div>
+        </div>
+      </div>
+    </section>
 
-            const inputs = ['clientName', 'clientCity', 'serviceType', 'urgencyLevel', 'serviceDetails'];
-            inputs.forEach(id => {
-                const el = document.getElementById(id);
-                if (el) {
-                    el.addEventListener('input', updateMessagePreview);
-                    el.addEventListener('change', updateMessagePreview);
-                }
-            });
+    <section id="orcamento" class="py-16 hero-pattern border-b border-white/10">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-8"><p class="text-signal text-xs uppercase tracking-[.2em] font-bold">Orçamento rápido</p><h2 class="font-heading text-3xl font-extrabold mt-3">Conte o que você precisa</h2><p class="text-slate-400 mt-3 text-sm">As informações serão organizadas em uma mensagem para você enviar pelo WhatsApp.</p></div>
+        <form id="budgetForm" class="bg-graphite-800 border border-white/10 rounded-2xl p-5 sm:p-8 space-y-5">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <label class="text-xs text-slate-300 font-bold">NOME / EMPRESA *
+              <input id="clientName" required class="focus-yellow w-full mt-2 bg-graphite-950 border border-white/15 rounded-lg p-3 text-sm text-white" placeholder="Seu nome">
+            </label>
+            <label class="text-xs text-slate-300 font-bold">CIDADE / BAIRRO *
+              <input id="clientCity" required class="focus-yellow w-full mt-2 bg-graphite-950 border border-white/15 rounded-lg p-3 text-sm text-white" placeholder="Ex.: Marau - RS">
+            </label>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <label class="text-xs text-slate-300 font-bold">TIPO DE SERVIÇO *
+              <select id="serviceType" class="focus-yellow w-full mt-2 bg-graphite-950 border border-white/15 rounded-lg p-3 text-sm text-white">
+                <option>Instalações e reparos elétricos residenciais/comerciais</option><option>Manutenção industrial</option><option>Energia solar</option><option>Elétrica rural e agrícola</option><option>Automação e acionamentos</option><option>Diagnóstico eletrônico em bancada</option><option>Outro serviço</option>
+              </select>
+            </label>
+            <label class="text-xs text-slate-300 font-bold">PRAZO / URGÊNCIA
+              <select id="urgencyLevel" class="focus-yellow w-full mt-2 bg-graphite-950 border border-white/15 rounded-lg p-3 text-sm text-white">
+                <option>Atendimento programado</option><option>Urgente</option><option>Quero apenas uma avaliação</option>
+              </select>
+            </label>
+          </div>
+          <label class="block text-xs text-slate-300 font-bold">DESCREVA O SERVIÇO OU PROBLEMA *
+            <textarea id="serviceDetails" required rows="4" class="focus-yellow w-full mt-2 bg-graphite-950 border border-white/15 rounded-lg p-3 text-sm text-white" placeholder="Explique o que aconteceu ou o serviço que deseja realizar..."></textarea>
+          </label>
+          <div class="bg-graphite-950 border border-white/10 rounded-xl p-4">
+            <p class="text-xs text-slate-400 mb-2"><i class="fa-regular fa-eye text-signal mr-2"></i>Prévia da mensagem</p>
+            <p id="msgPreview" class="text-xs text-slate-300 whitespace-pre-line leading-relaxed"></p>
+          </div>
+          <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl py-4 transition"><i class="fa-brands fa-whatsapp text-xl mr-2"></i>Enviar solicitação pelo WhatsApp</button>
+          <p class="text-center text-[11px] text-slate-500">O envio será aberto no WhatsApp. O orçamento será avaliado após o contato.</p>
+        </form>
+      </div>
+    </section>
 
-            updateMessagePreview();
-        });
+    <section id="contato" class="py-16 bg-graphite-950">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+        <p class="text-signal text-xs uppercase tracking-[.2em] font-bold">Vamos conversar</p>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold mt-3">Precisa de um eletricista?</h2>
+        <p class="text-slate-400 mt-4 max-w-2xl mx-auto">Entre em contato, explique sua necessidade e combine uma avaliação do serviço.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-3 mt-8">
+          <a href="https://wa.me/5554991377506?text=Ol%C3%A1!%20Encontrei%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20servi%C3%A7o." target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-500 rounded-xl px-7 py-4 font-bold text-white"><i class="fa-brands fa-whatsapp mr-2"></i>Falar pelo WhatsApp</a>
+          <a href="#orcamento" class="border border-signal text-signal hover:bg-signal hover:text-graphite-950 rounded-xl px-7 py-4 font-bold transition"><i class="fa-solid fa-calculator mr-2"></i>Preencher orçamento</a>
+        </div>
+        <div class="mt-10 inline-flex items-center gap-3 text-slate-400 text-sm"><i class="fa-solid fa-location-dot text-signal"></i>Marau e região — Rio Grande do Sul</div>
+      </div>
+    </section>
+  </main>
 
-        function filterServices(category) {
-            const cards = document.querySelectorAll('.service-card');
-            const buttons = document.querySelectorAll('.tab-btn');
+  <footer class="bg-black border-t border-white/10 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-5">
+      <div class="flex items-center gap-3"><span class="w-9 h-9 rounded-lg bg-signal text-graphite-950 flex items-center justify-center"><i class="fa-solid fa-bolt"></i></span><div><strong class="font-heading text-sm text-white">ELETRICISTA TÉCNICO</strong><p class="text-xs text-slate-500">Serviços elétricos e manutenção</p></div></div>
+      <p class="text-xs text-slate-500 text-center">© <span id="year"></span> ELETRICISTA TÉCNICO. Todos os direitos reservados.</p>
+      <a href="https://wa.me/5554991377506" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 text-sm font-semibold"><i class="fa-brands fa-whatsapp mr-1"></i>WhatsApp</a>
+    </div>
+  </footer>
 
-            buttons.forEach(btn => {
-                btn.classList.remove('active', 'bg-electricBlue', 'text-white', 'shadow-md');
-                btn.classList.add('bg-industrial-800', 'text-slate-300');
-            });
+  <a href="https://wa.me/5554991377506?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" aria-label="Falar pelo WhatsApp" class="fixed bottom-5 right-5 z-40 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center text-3xl shadow-2xl transition hover:scale-105"><i class="fa-brands fa-whatsapp"></i></a>
 
-            const activeBtn = document.getElementById(`tab-${category}`);
-            if (activeBtn) {
-                activeBtn.classList.add('active', 'bg-electricBlue', 'text-white', 'shadow-md');
-                activeBtn.classList.remove('bg-industrial-800', 'text-slate-300');
-            }
+  <script>
+    const PHONE_NUMBER = '5554991377506';
 
-            cards.forEach(card => {
-                if (category === 'todos' || card.classList.contains(category)) {
-                    card.classList.remove('hidden');
-                } else {
-                    card.classList.add('hidden');
-                }
-            });
-        }
+    const menuBtn = document.getElementById('mobileMenuBtn');
+    const menu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      const opening = menu.classList.contains('hidden');
+      menu.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', String(opening));
+      menuBtn.innerHTML = opening ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+    });
+    document.querySelectorAll('.mobile-link').forEach(link => link.addEventListener('click', () => {
+      menu.classList.add('hidden');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    }));
 
-        function getFormattedMessage() {
-            const name = document.getElementById('clientName').value.trim() || '[Seu Nome / Empresa]';
-            const city = document.getElementById('clientCity').value.trim() || '[Sua Localização]';
-            const type = document.getElementById('serviceType').value;
-            const urgency = document.getElementById('urgencyLevel').value;
-            const details = document.getElementById('serviceDetails').value.trim() || '[Descrição do serviço]';
+    document.querySelectorAll('.tab-btn').forEach(button => button.addEventListener('click', () => {
+      const filter = button.dataset.filter;
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+      document.querySelectorAll('.service-card').forEach(card => {
+        card.classList.toggle('hidden', filter !== 'todos' && !card.classList.contains(filter));
+      });
+    }));
 
-            return `⚡ *SOLICITAÇÃO DE ORÇAMENTO - SITE*\n\n` +
-                   `👤 *Nome/Empresa:* ${name}\n` +
-                   `📍 *Localização:* ${city}\n` +
-                   `🛠 *Setor / Serviço:* ${type}\n` +
-                   `🚨 *Urgência:* ${urgency}\n\n` +
-                   `📝 *Detalhes do Serviço/Problema:*\n${details}\n\n` +
-                   `_Enviado através do formulário do site._`;
-        }
+    document.querySelectorAll('[data-service]').forEach(link => link.addEventListener('click', () => {
+      document.getElementById('serviceType').value = link.dataset.service;
+      updatePreview();
+    }));
 
-        function updateMessagePreview() {
-            const previewEl = document.getElementById('msgPreview');
-            if (previewEl) {
-                previewEl.textContent = getFormattedMessage();
-            }
-        }
-
-        function generateWhatsAppLink() {
-            const text = getFormattedMessage();
-            const encodedText = encodeURIComponent(text);
-            const waUrl = `https://wa.me/${PHONE_NUMBER}?text=${encodedText}`;
-            window.open(waUrl, '_blank');
-        }
-    </script>
+    const fieldIds = ['clientName','clientCity','serviceType','urgencyLevel','serviceDetails'];
+    function messageText() {
+      const val = id => document.getElementById(id).value.trim();
+      return `⚡ *SOLICITAÇÃO DE ORÇAMENTO - SITE*\\n\\n` +
+        `👤 *Nome/Empresa:* ${val('clientName') || 'Não informado'}\\n` +
+        `📍 *Localização:* ${val('clientCity') || 'Não informada'}\\n` +
+        `🛠 *Serviço:* ${val('serviceType')}\\n` +
+        `⏱ *Prazo:* ${val('urgencyLevel')}\\n\\n` +
+        `📝 *Descrição:*\\n${val('serviceDetails') || 'Não informada'}\\n\\n` +
+        `_Mensagem enviada pelo site Eletricista Técnico._`;
+    }
+    function updatePreview() {
+      document.getElementById('msgPreview').textContent = messageText();
+    }
+    fieldIds.forEach(id => {
+      document.getElementById(id).addEventListener('input', updatePreview);
+      document.getElementById(id).addEventListener('change', updatePreview);
+    });
+    document.getElementById('budgetForm').addEventListener('submit', event => {
+      event.preventDefault();
+      if (!event.currentTarget.reportValidity()) return;
+      const url = `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(messageText())}`;
+      window.open(url, '_blank', 'noopener,noreferrer');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+    updatePreview();
+  </script>
 </body>
 </html>
